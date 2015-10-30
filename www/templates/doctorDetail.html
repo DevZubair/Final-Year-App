@@ -1,0 +1,55 @@
+<ion-view view-title="DOCTOR'S DETAIL" hide-nav-bar='false'>
+  <ion-nav-buttons side="left">
+    <div class="margin-left-5px">
+      <i class="icon ion-navicon bar-dash-menu" ng-click="toggleLeft()"></i>
+    </div>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <div class="margin-top-4px">
+      <img src="img/nav-bar-logo.png" class="width-29px">
+    </div>
+  </ion-nav-buttons>
+  <ion-content class="content-margin-top">
+    <div class="list card">
+
+      <div class="item item-avatar">
+
+        <img src="img/speciality.png">
+        <div class="row">
+          <h2 class="col">Dr. Lina</h2>
+          <p class="col">7:30pm - 9:00pm</p>
+        </div>
+        <p class="doctor-detail-degree">Neurologist</p>
+        <p>MBBS, Phd</p>
+      </div>
+    </div>
+
+    <div class="row margin-top-bottom">
+      <div class=" col col-50 margin-top-6percent">
+        <p class="waiting-alignment font-styling"> Current Number</p>
+        <div class="ion-android-list ion-current-number-size"></div>
+        <p class="numbers_alignment">05</p>
+      </div>
+      <div class="vertical-line"></div>
+
+      <div class=" col col-50 margin-top-6percent">
+        <p class="serving-alignment font-styling"> In waiting </p>
+        <div class="ion-ios-people ion-waiting-dr-details-size"></div>
+        <p class="numbers_alignment">10</p>
+      </div>
+    </div>
+
+    <div class="item item-toggle toggle-border">
+      Schedule Number
+      <label class="toggle toggle-assertive toggle-alignment">
+        <input type="checkbox" ng-model="appointmentCheckbox" ng-checked="appointmentToggle" ng-click="appointmentCheckbox && showConfirm()">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+      <div class="ion-yes-alignment"> yes</div>
+      <div class="ion-no-alignment"> No</div>
+    </div>
+
+  </ion-content>
+</ion-view>

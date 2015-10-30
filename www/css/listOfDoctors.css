@@ -1,0 +1,104 @@
+.viewBackground{
+  background-color: #ffffff;
+}
+.margin-top-2{
+  margin-top: 2px !important;
+}
+.div-gap-margin{
+  height: 3.5em;
+  margin-bottom: 15px;
+}
+.numberCircle {
+  border-radius: 50%;
+  max-width: 23px;
+  height: 22px;
+  padding: 0;
+  color: #FFF;
+  text-align: center;
+  font: 14px Arial, sans-serif;
+  background-color: #c92420;
+  margin-top: 15px;
+  margin-left: 8px;
+}
+.margin-top-3{
+  margin-top: 5px;
+}
+.theme-font-grey-color{
+  color: rgba(70, 69, 69, 0.75);
+}
+.theme-font-green-color{
+  color: #8bdb5e;
+}
+.font-size-11{
+  font-size: 11px !important;
+}
+.padding-top-12{
+  padding-top: 12px !important;
+}
+.padding-top-19{
+  padding-top: 19px !important;
+}
+.float-right{
+  float: right;
+ }
+.person-icon-img i{
+  color: rgba(0, 0, 0, 0);
+  font-size: x-large;
+}
+.person-icon-img-setting{
+  width: 92%;
+  margin-left: 28%;
+  margin-top: 47%;
+}
+.person-icon-img i > img{
+  width: 1.0em;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -6px;
+}
+.list-width-47{
+  width: 78%;
+}
+.ion-size-x{
+  color: #c92420;
+  width: 40%;
+  margin-left: 79%;
+  margin-top: 38%;
+  font-size: 163%
+}
+.margin-top-n5{
+  margin-top:-5% ;
+}
+.searching-bar-adjustment{
+
+  width: 140%;
+  border-bottom: 1px solid #F7F6F5;
+  margin-left: 8%;
+}
+
+.search-background-color{
+  background-color: #ffffff;
+}
+.bottom-bar-adjustment{
+  width: 80%;
+  border-bottom: 1px solid #F9F8F7;
+  margin-left: 7%;
+}
+.icon-refresh-size{
+  font-size: 189%;
+  margin-left: 1%;
+  margin-top: 3%;
+  color: #c92420;
+}
+.doctor-card-heading{
+  margin-top: 2%;
+  margin-left: 1%;
+}
+.doctor-name-status{
+  margin-left: -4%;
+  margin-top: -15%;
+}
+.right-arrow-icon{
+  margin-top: 74%;
+  margin-right: 50%;
+}

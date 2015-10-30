@@ -1,0 +1,61 @@
+.content-margin-top{
+    margin-top: 4%;
+}
+.header-color{
+    background-color:#ffffff !important;
+    border-bottom: 1px dashed black;
+}
+.bar-dash-menu{
+    font-size: 38px;
+    color: #cc2320;
+}
+.margin-top-4px{
+    margin-top: 4px;
+}
+.bar .title {
+    font-size: 15px;
+    font-weight: 400;
+}
+.width-29px {
+    width: 29px;
+}
+.border-none{
+    border: none !important;
+}
+
+.bar .title.title-left {
+  text-align: center;
+}
+.margin-top-2{
+  margin-top: 2px !important;
+}
+.margin-top-3percent{
+  margin-top: 3%;
+}
+.margin-top-2percent{
+  margin-top: 2%;
+}
+.margin-top-6percent{
+ margin-top: 6%;
+}
+.font-size-15{
+  font-size: 15px;
+}
+.font-size-16{
+  font-size: 16px;
+}
+.font-family-cursive{
+  font-family: cursive;
+}
+.font-size-14{
+  font-size: 14px;
+}
+.theme-font-darkgrey-color{
+  color:#B1AEAE !important;
+}
+.bar.bar-light {
+  border-color: #A09C9C !important;
+}
+.margin-left-5px{
+  margin-left: 5px;
+}

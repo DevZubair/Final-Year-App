@@ -1,0 +1,115 @@
+.margin-top-n2
+{
+  margin-top:-5% ;
+}
+.font-styling
+{
+  color: #696767;
+  font-family: "sans-serif"
+}
+.vertical-line
+{
+  border-right: 1px solid #DDDCDC;
+}
+.waiting-alignment
+{
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 1%;
+}
+.icon-waiting-size
+{
+  margin-bottom: 8%;
+  margin-top: -2%;
+  font-size: 30px;
+  color: #c92420;
+  text-align: center;
+}
+.icon-serving-size
+{
+  margin-bottom: 12%;
+  font-size: 25px;
+  color: #c92420;
+  text-align: center;
+}
+.serving-alignment
+{
+  margin-left: 28%;
+  font-weight: 400;
+  font-size: 16px;
+}
+.ticket-alignment
+{
+  text-align: center;
+  font-weight: 400;
+  font-size: 23px;
+  margin-top: 10px;
+  color: #676565;
+}
+.icon-ticket-size
+{
+  font-size: 70px;
+  text-align: center;
+  color: #c92420;
+}
+.card
+{
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 5%;
+  background-color: #fff;
+}
+.bg-image
+{
+  margin-top: -42%;
+}
+.reschedule-size
+{
+  margin-top: -16% !important;
+  font-size: 20px;
+  color: #c92420;
+}
+.cancel-alignment
+{
+  font-weight: 400;
+  font-size: 15px;
+}
+.icon-cancel-size
+{
+  margin-bottom: 24%;
+  font-size: 38px;
+  color: #c92420;
+  margin-top: 7%;
+}
+.icon-calender-size
+{
+  font-size: 35px;
+  color: #c92420;
+}
+.numbers_alignment
+{
+  font-size: 22px;
+  text-align: center;
+}
+.center-appointed-number{
+  font-size: 28px !important;
+  margin-top: -1.76em;
+  margin-bottom: 25%;
+  color: white;
+}
+.mins-left
+{
+  font-size: 16px;
+  color: #1F1E1E;
+  margin-top: 1px;
+  margin-left: 2%;
+  width: 70%;
+}
+.time-left
+{
+  font-size: 25px;
+  color: #c92420;
+  font-weight: 500 !important;
+  margin-left: 15%;
+}
+

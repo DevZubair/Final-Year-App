@@ -1,0 +1,66 @@
+<ion-view view-title="APPOINTMENT DETAIL" hide-nav-bar='false'>
+  <ion-nav-buttons side="left">
+    <div class="margin-left-5px">
+      <i class="icon ion-navicon bar-dash-menu" ng-click="toggleLeft()"></i>
+    </div>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <div class="margin-top-4px">
+      <img src="img/nav-bar-logo.png" class="width-29px">
+    </div>
+  </ion-nav-buttons>
+  <ion-content class="content-margin-top">
+    <div class="row">
+
+      <div class="col col-50">
+        <p class="serving-alignment font-styling">Now Serving </p>
+        <div class="ion-android-person  icon-serving-size"></div>
+        <p class="numbers_alignment">10</p>
+      </div>
+
+      <div class="vertical-line"></div>
+
+      <div class="col col-50">
+        <p class="waiting-alignment font-styling"> In Waiting </p>
+        <div class="ion-ios-people icon-waiting-size"></div>
+        <p class="numbers_alignment">05</p>
+      </div>
+    </div>
+    <div class="card" style="background-image: url(img/image_blur.jpg); background-repeat: no-repeat">
+
+      <p class="ticket-alignment">Your Number </p>
+      <div class="icon-ticket-size">
+        <i class="ion-ios-circle-filled"></i>
+        <p class="center-appointed-number">11</p>
+        <div class="row text-center">
+
+          <b class="time-left">25 </b>
+          <div class="mins-left"> Minutes Left Approximately</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-50 text-center margin-top-2percent">
+        <p class="waiting-alignment font-styling">Reschedule</p>
+        <div class="ion-calendar icon-calender-size icon-reschedule-size">
+        </div>
+        <div class="ion-share reschedule-size"></div>
+
+      </div>
+      <div class="vertical-line"></div>
+
+      <div class=" col col-50 text-center margin-top-3percent">
+        <p class="cancel-alignment font-styling"> Cancel </p>
+
+        <div class="ion-ios-close icon-cancel-size"></div>
+
+      </div>
+    </div>
+
+
+    </div>
+
+  </ion-content>
+</ion-view>
