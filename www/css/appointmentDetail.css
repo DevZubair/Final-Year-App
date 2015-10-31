@@ -112,4 +112,7 @@
   font-weight: 500 !important;
   margin-left: 15%;
 }
-
+.doctor-name-heading{
+  font-family: initial !important;
+  color: #840909;
+}

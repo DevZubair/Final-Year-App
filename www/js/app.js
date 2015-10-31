@@ -33,36 +33,59 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
 
       .state('clinicsList', {
         url: '/clinicsList',
-        templateUrl: 'templates/listOfClinics.html'
+        templateUrl: 'templates/listOfClinics.html',
+        controller: 'clinicsListController',
+        cache: false
 
       })
       .state('doctorsList', {
         url: '/doctorsList',
-        templateUrl: 'templates/listOfDoctors.html'
+        templateUrl: 'templates/listOfDoctors.html',
+        controller: 'doctorsListController',
+        cache: false
 
       })
       .state('doctorDetail', {
         url: '/doctorDetail',
         templateUrl: 'templates/doctorDetail.html',
-        controller: 'doctorDetailController'
+        controller: 'doctorDetailController',
+        cache: false
       })
       .state('appointmentDetail', {
         url: '/appointmentDetail',
         templateUrl: 'templates/appointmentDetail.html',
-        controller: 'appointmentDetailController'
+        controller: 'appointmentDetailController',
+        cache: false
       })
       .state('settingsPage', {
         url: '/settingsPage',
-        templateUrl: 'templates/settingsPage.html'
+        templateUrl: 'templates/settingsPage.html',
+        controller: 'settingsController',
+        cache: false
 
       })
       .state('thanksPage', {
         url: '/thanksPage',
-        templateUrl: 'templates/thanksPage.html'
+        templateUrl: 'templates/thanksPage.html',
+        cache: false
+
+      })
+      .state('appointmentsList', {
+        url: '/appointmentsList',
+        templateUrl: 'templates/appointmentsList.html',
+        controller: 'appointmentsListController',
+        cache: false
+
+      })
+      .state('contactPage', {
+        url: '/contactPage',
+        templateUrl: 'templates/contactPage.html',
+        controller: 'contactPageController',
+        cache: false
 
       });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/doctorDetail');
+    $urlRouterProvider.otherwise('/clinicsList');
 
   });

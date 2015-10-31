@@ -14,6 +14,8 @@
   <link href="css/settingsPage.css" rel="stylesheet">
   <link href="css/thanksPage.css" rel="stylesheet">
   <link href="css/sideMenu.css" rel="stylesheet">
+  <link href="css/appointmentsList.css" rel="stylesheet">
+  <link href="css/contactPage.css" rel="stylesheet">
 
   <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
   <link href="css/ionic.app.css" rel="stylesheet">
@@ -29,6 +31,12 @@
   <script src="js/app.js"></script>
   <script src="js/Controllers/doctorDetailController.js"></script>
   <script src="js/Controllers/appointmentDetailController.js"></script>
+  <script src="js/Controllers/appointmentsListController.js"></script>
+  <script src="js/Controllers/clinicsListController.js"></script>
+  <script src="js/Controllers/doctorsListController.js"></script>
+  <script src="js/Controllers/settingsController.js"></script>
+  <script src="js/Controllers/contactPageController.js"></script>
+
   <script src="js/services.js"></script>
 </head>
 <body>
@@ -63,13 +71,13 @@
       </div>
     </a>
 
-    <div class="row height-4em padding-top-9" menu-close>
+    <div class="row height-4em padding-top-9" menu-close ui-sref="appointmentsList">
       <div class="col col-20"><i class="ion-ios-pulse-strong" style="font-size: 24px;color: #D83249;"></i></div>
       <label class="col col-80 item item-input border-LR-none border-top-none" style="padding-top: 7px">
         <p class="font-color-grey margin-left-minus4">All Appointments</p>
       </label>
     </div>
-    <div class="row height-4em" menu-close>
+    <div class="row height-4em" menu-close ui-sref="clinicsList">
       <div class="col col-20 margin-top-08px">
         <i class="ion-ios-paper-outline" style="font-size: 24px;color: #D83249;"></i>
       </div>
@@ -77,7 +85,7 @@
         <p class="font-color-grey margin-left-minus4">Clinics</p>
       </label>
     </div>
-    <div class="row height-4em" menu-close>
+    <div class="row height-4em" menu-close ui-sref="settingsPage">
       <div class="col col-20 margin-top-08px">
         <i class="ion-gear-a" style="font-size: 24px;color: #D83249;"></i>
       </div>

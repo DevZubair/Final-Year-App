@@ -1,8 +1,10 @@
-hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state) {
+hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate) {
 
   $scope.appointmentCheckbox=false;
   $scope.appointmentToggle=false;
-
+  $scope.toggleLeft = function () {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
   // A confirm dialog
   $scope.showConfirm = function() {
     $scope.appointmentToggle = true;
@@ -13,7 +15,7 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
     confirmPopup.then(function(res) {
       if(res) {
         console.log('You are sure');
-        $state.go("appointmentDetail");
+        $state.go("contactPage");
       } else {
         console.log('You are not sure');
         $scope.appointmentCheckbox=false;
