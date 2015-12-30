@@ -1,7 +1,7 @@
 .search-bar-adjustment{
 
     width: 140%;
-    border-bottom: 1px solid #F7F6F5;
+    border-bottom: 1px solid #D4D0D0;
     margin-left: 20%;
 }
 .search-background-color{
@@ -22,5 +22,5 @@
 }
 .item
 {
-    border-color: #F7F3F3;
+    border-color: #D4D0D0;
 }
