@@ -1,17 +1,18 @@
 hospitalModule.factory('hospitalFactory',function ()
 
 {
-    var clinicName='';
-    var getterName=function(name)
+    var clinicID='';
+    var getterName=function(id)
     {
-        setterName(name);
+        setterName(id);
     };
-    var setterName=function(clinic)
+    var setterName=function(id)
     {
-        clinicName=clinic;
+        clinicID=id;
+      localStorage.setItem('ClinicID',id);
     };
     var returnClinic=function(){
-        return clinicName;
+        return localStorage.getItem('ClinicID');
     };
     return{
         returnClinic:returnClinic,

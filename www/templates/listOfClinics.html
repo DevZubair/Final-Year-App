@@ -26,13 +26,12 @@
    </ion-header-bar>
    <ion-content class="content-margin-top">
 
-       <div class="list  margin-top-10"  >
-           <div class="item item-avatar margin-top-10" ui-sref="doctorsList" ng-repeat="list in allClinics">
+       <div class="list  margin-top-10">
+           <div class="item item-avatar margin-top-10" ng-click="changeState(list._id)" ng-repeat="list in allClinics">
                <img src="img\logo.png">
                <h2>{{list.Name}}</h2>
                <p>{{list.Location}}</p>
            </div>
-
        </div>
 
    </ion-content>
