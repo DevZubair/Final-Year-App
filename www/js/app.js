@@ -88,4 +88,7 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/clinicsList');
 
-  });
+  })
+    .constant({
+        Domain : 'https://fyp-server.herokuapp.com/'
+    });

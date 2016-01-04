@@ -34,26 +34,26 @@
                     <div class="list">
                         <label class="item item-input border-top-none border-LR-none">
                             <span class="input-label placeholder-grey-color font-color-grey font-size-14">First Name</span>
-                            <input class="textFont" type="text">
+                            <input class="textFont" type="text" ng-model="$parent.PatientFirstName">
                         </label>
                         <label class="item item-input border-LR-none">
                             <span class="input-label placeholder-grey-color font-color-grey font-size-14">Last Name</span>
-                            <input class="textFont" type="text">
+                            <input class="textFont" type="text" ng-model="$parent.PatientLastName">
                         </label>
                         <label class="item item-input border-LR-none border-bottom-none">
                             <span class="input-label placeholder-grey-color font-color-grey font-size-14">Age</span>
-                            <input class="textFont" type="text">
+                            <input class="textFont" type="number" ng-model="$parent.PatientAge">
                         </label>
                         <label class="item item-input border-LR-none border-bottom-none">
                             <span class="input-label placeholder-grey-color font-color-grey font-size-14">Gender</span>
-                            <input class="textFont" type="text">
+                            <input class="textFont" type="text" ng-model="$parent.PatientGender">
                         </label>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row" ui-sref="appointmentDetail">
-            <div class="col text-center ok-image-width ion-android-checkmark-circle">
+        <div class="row" ng-click="appoint()">
+            <div class="col text-center ok-image-width">
                 <img src="img/ok-logo.gif">
             </div>
 

@@ -1,4 +1,4 @@
-hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate) {
+hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http, hospitalFactory) {
 
   $scope.appointmentCheckbox=false;
   $scope.appointmentToggle=false;
@@ -23,7 +23,17 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
       }
     });
   };
+    $scope.ClinicID = hospitalFactory.returnClinic();
+    $scope.DoctorID = hospitalFactory.returnDoctor();
+    $http.post("https://fyp-server.herokuapp.com/getMachineDetail",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID._id}).then (function(response){
 
+        if(response){
+            console.log(response);
+            $scope.drdetail = response.data.content;
+        }
 
+    },function(error){
+        console.log(error);
+    });
 });
 

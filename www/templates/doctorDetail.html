@@ -16,10 +16,10 @@
 
         <img src="img/speciality.png">
         <div class="row">
-          <h2 class="col">Dr. Lina</h2>
-          <p class="col">7:30pm - 9:00pm</p>
+          <h2 class="col">{{DoctorID.DoctorFirstName}}</h2>
+          <p class="col">{{DoctorID.Timings}}</p>
         </div>
-        <p class="doctor-detail-degree">Neurologist</p>
+        <p class="doctor-detail-degree">{{DoctorID.Speciality}}</p>
         <p>MBBS, Phd</p>
       </div>
     </div>
@@ -28,14 +28,14 @@
       <div class=" col col-50 margin-top-6percent">
         <p class="waiting-alignment font-styling"> Current Number</p>
         <div class="ion-android-list ion-current-number-size"></div>
-        <p class="numbers_alignment">05</p>
+        <p class="numbers_alignment">{{drdetail.CurrentNumber}}</p>
       </div>
       <div class="vertical-line"></div>
 
       <div class=" col col-50 margin-top-6percent">
         <p class="serving-alignment font-styling"> In waiting </p>
         <div class="ion-ios-people ion-waiting-dr-details-size"></div>
-        <p class="numbers_alignment">10</p>
+        <p class="numbers_alignment">{{drdetail.WaitingPersons.length}}</p>
       </div>
     </div>
 
