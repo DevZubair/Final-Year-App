@@ -11,7 +11,7 @@ hospitalModule.controller('contactPageController', function($scope,$ionicPopup,$
     $scope.PatientGender= '';
 
     $scope.appoint=function(){
-        $http.post(Domain + "addAppointment",{ClinicID:$scope.ClinicID, MobileID : "HBDSWQWSDEaaFRGTHYJ" , DoctorID:$scope.DoctorID ,
+        $http.post(Domain + "addAppointment",{ClinicID:$scope.ClinicID, MobileID : "SDGSJDHGSJDHGDJH" , DoctorID:$scope.DoctorID ,
             PatientFirstName : $scope.PatientFirstName , PatientLastName :  $scope.PatientLastName, PatientAge :  $scope.PatientAge,
             Gender : $scope.PatientGender}).then (function(response){
 
@@ -27,7 +27,6 @@ hospitalModule.controller('contactPageController', function($scope,$ionicPopup,$
             console.log(error);
         });
     }
-
 
     $scope.sendDoctorDetail = function(data){
         hospitalFactory.getterDoctor(data);
