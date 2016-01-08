@@ -104,5 +104,5 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
 
   })
     .constant({
-        Domain : 'http://localhost:3000/'
+        Domain : 'http://fyp-server.herokuapp.com/'
     });
