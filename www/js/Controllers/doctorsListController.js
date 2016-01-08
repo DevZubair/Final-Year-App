@@ -3,21 +3,22 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
     $ionicSideMenuDelegate.toggleLeft();
   };
 
-  $scope.ID = hospitalFactory.returnClinic();
-
+  $scope.showSpinner = true;
+  $scope.ID = localStorage.getItem('ClinicID');
 
   $http.post(Domain + "getClinicDoctors",{ClinicID:$scope.ID}).then (function(response){
 
     if(response){
       console.log(response);
       $scope.drarray = response.data.content;
-      console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++')
+      console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
       console.log($scope.drarray);
-
+      $scope.showSpinner = false;
     }
 
   },function(error){
     console.log(error);
+    $scope.showSpinner = false;
   });
 
   $scope.sendDoctorDetail = function(data){

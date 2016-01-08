@@ -1,7 +1,14 @@
-hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http, hospitalFactory) {
+hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http,hospitalFactory,$ionicBackdrop) {
 
+  $ionicBackdrop.retain();
+
+  $scope.ClinicID = localStorage.getItem('ClinicID');
+  $scope.DoctorID = localStorage.getItem('DoctorID');
   $scope.appointmentCheckbox=false;
   $scope.appointmentToggle=false;
+  var doctor = localStorage.getItem('Doctor');
+  $scope.doctorName = JSON.parse(doctor);
+
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
@@ -23,17 +30,18 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
       }
     });
   };
-    $scope.ClinicID = hospitalFactory.returnClinic();
-    $scope.DoctorID = hospitalFactory.returnDoctor();
-    $http.post("https://fyp-server.herokuapp.com/getMachineDetail",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID._id}).then (function(response){
 
-        if(response){
-            console.log(response);
-            $scope.drdetail = response.data.content;
-        }
+  $http.post("https://fyp-server.herokuapp.com/getMachineDetail",{ClinicID:$scope.ClinicID, DoctorID:$scope.DoctorID}).then (function(response){
 
-    },function(error){
-        console.log(error);
-    });
+    if(response){
+      console.log(response);
+      $scope.drdetail = response.data.content;
+      $ionicBackdrop.release();
+    }
+
+  },function(error){
+    console.log(error);
+    $ionicBackdrop.release();
+  });
 });
 

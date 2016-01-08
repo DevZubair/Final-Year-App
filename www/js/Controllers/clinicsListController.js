@@ -1,19 +1,27 @@
-hospitalModule.controller('clinicsListController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http,hospitalFactory) {
+hospitalModule.controller('clinicsListController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http,hospitalFactory,Domain) {
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
+  $scope.showSpinner = true;
+  $scope.cross='';
 
-  $http.get('https://fyp-server.herokuapp.com/getAllClinics').then(function(response) {
+  $scope.clearSearch= function () {
+    $scope.cross='';
+  };
+
+  $http.get(Domain + 'getAllClinics').then(function(response) {
     if(response){
       console.log(response);
       $scope.allClinics = response.data.content;
+      $scope.showSpinner = false;
     }},function(error){
     console.log(error);
+    $scope.showSpinner = false;
   });
 
-  $scope.changeState=function(id)
+  $scope.changeState=function(clinic)
   {
-    hospitalFactory.getterName(id);
+    hospitalFactory.getterName(clinic);
     $state.go('doctorsList');
   };
 });

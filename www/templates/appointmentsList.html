@@ -30,13 +30,13 @@
 
   <ion-content class="content-margin-top">
 
-    <div class="row viewBackground margin-top-2 div-gap-margin" ui-sref="appointmentDetail">
+    <div class="row viewBackground margin-top-2 div-gap-margin" ng-repeat="lists in appointments" ng-click="appointmentDetail(lists)">
       <div class=" col col-10 numberCircle">
         <p class="margin-top-2">1</p>
       </div>
       <div class="col col-50 doctor-card-heading">
-        <div class="theme-font-grey-color font-size-15 font-family-initial">Aziz Medical Center</div>
-        <div class="theme-font-grey-color font-size-14 font-family-initial margin-top-2percent">Dr.John</div>
+        <div class="theme-font-grey-color font-size-15 font-family-initial">{{lists.ClinicName}}</div>
+        <div class="theme-font-grey-color font-size-14 font-family-initial margin-top-2percent">Dr.{{lists.DoctorName}}</div>
 
       </div>
       <div class="col col-10 person-icon-img">
@@ -46,77 +46,8 @@
       </div>
 
       <div class="col padding-top-12">
-        <p class="theme-font-grey-color font-size-12">Current # <b>21</b></p>
-        <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # <b>29</b></p>
-      </div>
-    </div>
-
-    <div class="bottom-bar-adjustment"></div>
-
-    <div class="row viewBackground margin-top-2 div-gap-margin" ui-sref="appointmentDetail">
-      <div class=" col col-10 numberCircle">
-        <p class="margin-top-2">2</p>
-      </div>
-      <div class="col col-50 doctor-card-heading">
-        <div class="theme-font-grey-color font-size-15 font-family-initial">DayCare Center</div>
-        <div class="theme-font-grey-color font-size-14 font-family-initial margin-top-2percent">Dr.Lina</div>
-
-      </div>
-      <div class="col col-10 person-icon-img">
-        <i class=" col col-10 icon ion-record">
-          <img src="img/speciality.png">
-        </i>
-      </div>
-
-      <div class="col padding-top-12">
-        <p class="theme-font-grey-color font-size-12">Current # <b>11</b></p>
-        <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # <b>18</b></p>
-      </div>
-    </div>
-
-    <div class="bottom-bar-adjustment"></div>
-
-    <div class="row viewBackground margin-top-2 div-gap-margin" ui-sref="appointmentDetail">
-      <div class=" col col-10 numberCircle">
-        <p class="margin-top-2">3</p>
-      </div>
-      <div class="col col-50 doctor-card-heading">
-        <div class="theme-font-grey-color font-size-15 font-family-initial">Georgia Center</div>
-        <div class="theme-font-grey-color font-size-14 font-family-initial margin-top-2percent">Dr.Shepherd Lowis</div>
-
-      </div>
-      <div class="col col-10 person-icon-img">
-        <i class=" col col-10 icon ion-record">
-          <img src="img/speciality.png">
-        </i>
-      </div>
-
-      <div class="col padding-top-12">
-        <p class="theme-font-grey-color font-size-12">Current # <b>31</b></p>
-        <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # <b>42</b></p>
-      </div>
-    </div>
-
-    <div class="bottom-bar-adjustment"></div>
-
-    <div class="row viewBackground margin-top-2 div-gap-margin" ui-sref="appointmentDetail">
-      <div class=" col col-10 numberCircle">
-        <p class="margin-top-2">4</p>
-      </div>
-      <div class="col col-50 doctor-card-heading">
-        <div class="theme-font-grey-color font-size-15 font-family-initial">Shaukat Khanum</div>
-        <div class="theme-font-grey-color font-size-14 font-family-initial margin-top-2percent">Dr.Saleem</div>
-
-      </div>
-      <div class="col col-10 person-icon-img">
-        <i class=" col col-10 icon ion-record">
-          <img src="img/speciality.png">
-        </i>
-      </div>
-
-      <div class="col padding-top-12">
-        <p class="theme-font-grey-color font-size-12">Current # <b>51</b></p>
-        <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # <b>69</b></p>
+        <p class="theme-font-grey-color font-size-12">Current # <b>{{lists.DeviceNumber}}</b></p>
+        <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # <b>{{lists.AppointmentNumber}}</b></p>
       </div>
     </div>
 
