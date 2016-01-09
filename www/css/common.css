@@ -59,3 +59,16 @@
 .margin-left-5px{
   margin-left: 5px;
 }
+.center-item{
+  position: fixed; /* or absolute */
+  top: 40%;
+  left: 45%;
+}
+.spinner {
+  stroke: #E84444 !important;
+  fill: #444 !important;
+}
+.spinner svg {
+  width: 42px;
+  height: 56px;
+}

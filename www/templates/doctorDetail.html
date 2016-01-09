@@ -14,13 +14,13 @@
 
       <div class="item item-avatar">
 
-        <img src="img/speciality.png">
+        <img src="img/zubair.png" style="max-width: 55px !important;max-height: 55px !important;top: 25px !important;">
         <div class="row">
-          <h2 class="col">{{DoctorID.DoctorFirstName}}</h2>
-          <p class="col">{{DoctorID.Timings}}</p>
+          <h2 class="col">Dr.{{doctorName.DoctorFirstName}}</h2>
+          <p class="col col-offset-20">{{doctorName.Timings}}</p>
         </div>
-        <p class="doctor-detail-degree">{{DoctorID.Speciality}}</p>
-        <p>MBBS, Phd</p>
+        <p class="doctor-detail-degree">{{doctorName.Speciality}}</p>
+        <p>{{doctorName.Role}}</p>
       </div>
     </div>
 

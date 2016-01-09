@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in doctorDetailController.js
 var hospitalModule = angular.module('hospitalModule', ['ionic'])
 
-  .run(function($ionicPlatform) {
+  .run(function($ionicPlatform,$ionicPopup) {
     $ionicPlatform.ready(function() {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -19,6 +19,20 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
       if (window.StatusBar) {
         // org.apache.cordova.statusbar required
         StatusBar.styleLightContent();
+      }
+      // Check for network connection
+      if(window.Connection) {
+        if(navigator.connection.type == Connection.NONE) {
+          $ionicPopup.confirm({
+            title: 'No Internet Connection',
+            content: 'Sorry, your internet is not connected. Please reconnect and try again.'
+          })
+            .then(function(result) {
+              if(!result) {
+                ionic.Platform.exitApp();
+              }
+            });
+        }
       }
     });
   })
@@ -90,5 +104,5 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
 
   })
     .constant({
-        Domain : 'https://fyp-server.herokuapp.com/'
+        Domain : 'http://fyp-server.herokuapp.com/'
     });
