@@ -2,22 +2,35 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
+
+  $scope.MobileID = "ABCDSSDSDS45";
+  $http.post(Domain + "getAllAppointments",{MobileID:$scope.MobileID}).then (function(response){
+
+    if(response.data.code==200){
+      console.log(response);
+      $scope.appointments = response.data.content;
+
+    }else{
+      console.log(response);
+    }},function(error){
+    console.log(error);
+  });
+
   //Socket connection
   var socket = io.connect(Domain);
   socket.on('connect', function(){
     console.log('Connected to socket');
   });
 
-  $scope.MobileID = "ABCDEFGHIJK123245";
-
-  $http.post(Domain + "getAllAppointments",{MobileID:$scope.MobileID}).then (function(response){
-
-    if(response){
-      console.log(response);
-      $scope.appointments = response.data.content;
-
-    }},function(error){
-    console.log(error);
+  socket.on('device_active', function (data) {
+    console.log('Doctor :' + data.doctorID +'called pulse counter');
+    var ___Realtime = $scope.appointments.map(function (item) {
+      return item.DoctorID
+    }).indexOf(data.doctorID);
+    if(___Realtime >=0){
+      $scope.appointments[___Realtime].DeviceNumber = data.nowServing;
+      $scope.$apply($scope.appointments);
+    }
   });
 
   $scope.appointmentDetail = function (device) {
