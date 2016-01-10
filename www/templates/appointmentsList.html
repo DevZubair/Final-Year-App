@@ -27,22 +27,26 @@
       <div class="col"></div>
     </div>
 
-    <div ng-if="current" class="row viewBackground margin-top-2 div-gap-margin" ng-repeat="lists in appointments" ng-click="appointmentDetail(lists)" ng-class="{viewServed : lists.Past}">
-      <div class=" col col-10 numberCircle">
-        <p class="margin-top-2">1</p>
-      </div>
-      <div class="col col-50 doctor-card-heading">
-        <div class="theme-font-grey-color font-size-15 font-family-initial">{{lists.ClinicName}}</div>
-        <div class="theme-font-grey-color font-size-14 font-family-initial margin-top-2percent">Dr.{{lists.DoctorName}}</div>
-      </div>
-      <div class="col col-10 person-icon-img">
-        <i class=" col col-10 icon ion-record">
-          <img src="img/speciality.png">
-        </i>
-      </div>
-      <div class="col padding-top-12">
-        <p class="theme-font-grey-color font-size-12">Current # <b>{{lists.DeviceNumber}}</b></p>
-        <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # <b>{{lists.AppointmentNumber}}</b></p>
+    <div ng-if="current" ng-repeat="lists in appointments | orderBy:lists.DateTime">
+      <!--<p>{{lists.DateTime | date: "yyyy-MM-dd"}}</p>-->
+
+      <div class="row viewBackground margin-top-2 div-gap-margin" ng-click="appointmentDetail(lists)"> <!--ng-class="{viewServed : lists.Past}"-->
+        <div class=" col col-10 numberCircle">
+          <p class="margin-top-2">1</p>
+        </div>
+        <div class="col col-50 doctor-card-heading">
+          <div class="theme-font-grey-color font-size-15 font-family-initial">{{lists.ClinicName}}</div>
+          <div class="theme-font-grey-color font-size-14 font-family-initial margin-top-2percent">Dr.{{lists.DoctorName}}</div>
+        </div>
+        <div class="col col-10 person-icon-img">
+          <i class=" col col-10 icon ion-record">
+            <img src="img/speciality.png">
+          </i>
+        </div>
+        <div class="col padding-top-12">
+          <p class="theme-font-grey-color font-size-12">Current # <b>{{lists.DeviceNumber}}</b></p>
+          <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # <b>{{lists.AppointmentNumber}}</b></p>
+        </div>
       </div>
     </div>
 

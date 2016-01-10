@@ -5,6 +5,10 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
   $scope.ClinicID = localStorage.getItem('ClinicID');
   $scope.DoctorID = localStorage.getItem('DoctorID');
   $scope.myNumber = localStorage.getItem('appointNumber');
+  var doctor = localStorage.getItem('Doctor');
+  $scope.doctorName = JSON.parse(doctor);
+  var clinic = localStorage.getItem('Clinic');
+  $scope.clinicName = JSON.parse(clinic);
 
   $http.post(Domain + "getMachineDetail",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID}).then (function(response){
 
@@ -12,13 +16,11 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
       console.log(response);
       $scope.drdetail = response.data.content;
       $scope.drdetail.WaitingPersons = $scope.drdetail.WaitingPersons.length-1;
-
     }
 
   },function(error){
     console.log(error);
   });
-
 
   //Socket connection
   var socket = io.connect(Domain);
@@ -34,6 +36,5 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     $scope.drdetail.WaitingPersons = data.inWaiting-1;
     $scope.$apply($scope.drdetail);
   });
-
 });
 
