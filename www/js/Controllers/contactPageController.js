@@ -40,11 +40,25 @@ hospitalModule.controller('contactPageController', function($scope,$ionicPopup,$
           $ionicBackdrop.release();
           $state.go('appointmentDetail')
         }
+        else if(response.data.code == 400){
+          $scope.showAlert();
+          $ionicBackdrop.release();
+        }
       }
 
     },function(error){
       $ionicBackdrop.release();
       console.log(error);
+    });
+  };
+  $scope.showAlert = function() {
+    var alertPopup = $ionicPopup.alert({
+      title: 'Appointment Found',
+      template: 'You are already having an appointment with this doctor today. Please check.'
+    });
+
+    alertPopup.then(function(res) {
+      console.log('Appointment found');
     });
   };
 });
