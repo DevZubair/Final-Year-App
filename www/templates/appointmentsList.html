@@ -89,6 +89,24 @@
           <p class="text-center font-size-15 doctor-name-heading">Dr. {{pastAppointment.DoctorName}}</p>
         </div>
       </div>
+
+      <div class="margin2">
+       <div><p class=" font dp-inline">First Name: {{pastAppointment.PatientFirstName}}</p></div>
+        <div><p class=" font-size dp-inline">Last Name: {{pastAppointment.PatientLastName}}</p></div>
+        <div><p class=" font-size dp-inline">Age: {{pastAppointment.PatientAge}}</p></div>
+        <div><p class=" font-size dp-inline">Gender: {{pastAppointment.Gender}}</p></div>
+        <p class="font-review margin2">Your Reviews</p>
+        <div class="rating star1">
+          <span>☆</span><span>☆</span><span>☆</span>
+        </div>
+        <label class="item item-input margin2-14px">
+          <textarea placeholder="Comments"></textarea>
+        </label>
+
+
+
+
+      </div>
     </ion-content>
   </ion-modal-view>
 </script>

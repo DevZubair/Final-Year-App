@@ -8,3 +8,29 @@
 .font-family-initial{
   font-family: initial !important;
 }
+.dp-inline {
+  display: inline;
+}
+.font-size{
+  margin-left: 11%;
+  font-size: 125%;
+  color: #656565;
+}
+.margin2{
+  margin-top:10%;
+}
+.star1{
+  color: yellow;
+  margin-left: 28%;
+  font-size: 250%;
+  margin-top:5%;
+}
+.font-review{
+  font-size: 125%;
+  color: #656565;
+  text-align:  center;
+}
+.margin2-14px{
+  margin: 14px !important;
+}
+

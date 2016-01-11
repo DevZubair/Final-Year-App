@@ -5,7 +5,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
 
   $scope.showSpinner = true;
   $scope.current = true;
-  $scope.MobileID = "ABCDSSDSDS45";
+  $scope.MobileID = "ADFGNBBRCK";
 
   $http.post(Domain + "getAllAppointments",{MobileID:$scope.MobileID}).then(function(response){
 
@@ -103,6 +103,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
   });
 
   $scope.showModal = function (detail) {
+    console.log(detail)
     $scope.pastAppointment = detail;
     $scope.modal.show();
   };
