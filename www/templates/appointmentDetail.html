@@ -1,4 +1,4 @@
-<ion-view view-title="DAY CARE CENTER" hide-nav-bar='false'>
+<ion-view view-title="{{clinicName.Name}}" hide-nav-bar='false'>
   <ion-nav-buttons side="left">
     <div class="margin-left-5px">
       <i class="icon ion-navicon bar-dash-menu" ng-click="toggleLeft()"></i>
@@ -12,7 +12,7 @@
   <ion-content>
     <div class="row">
       <div class="col">
-      <p class="text-center font-size-15 doctor-name-heading">Doctor Lina Catherine</p>
+      <p class="text-center font-size-15 doctor-name-heading">Dr. {{doctorName.DoctorFirstName}}</p>
       </div>
     </div>
     <div class="row">
@@ -28,8 +28,8 @@
       <div class="col col-50">
         <p class="waiting-alignment font-styling"> In Waiting </p>
         <div class="ion-ios-people icon-waiting-size"></div>
-        <p class="numbers_alignment" ng-if="drdetail.WaitingPersons > 0">{{drdetail.WaitingPersons}}</p>
-        <p class="numbers_alignment" ng-if="drdetail.WaitingPersons <= 0">0</p>
+        <p class="numbers_alignment" ng-if="drdetail.WaitingPersons-drdetail.CurrentNumber > 0">{{drdetail.WaitingPersons-drdetail.CurrentNumber}}</p>
+        <p class="numbers_alignment" ng-if="drdetail.WaitingPersons-drdetail.CurrentNumber <= 0">0</p>
       </div>
     </div>
     <div class="card" style="background-image: url(img/image_blur.jpg); background-repeat: no-repeat">
@@ -64,9 +64,5 @@
 
       </div>
     </div>
-
-
-    </div>
-
   </ion-content>
 </ion-view>

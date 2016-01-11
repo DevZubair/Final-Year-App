@@ -1,12 +1,15 @@
 .viewBackground{
   background-color: #ffffff;
 }
+.viewServed{
+  background-color: rgba(211, 191, 191, 0.41) !important;
+}
 .margin-top-2{
   margin-top: 2px !important;
 }
 .div-gap-margin{
-  height: 3.5em;
-  margin-bottom: 15px;
+
+  margin-bottom: 2px;
 }
 .numberCircle {
   border-radius: 50%;
