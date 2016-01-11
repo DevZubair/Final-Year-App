@@ -4,8 +4,10 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
   };
 
   $scope.showSpinner = true;
-  $scope.current = true;
-  $scope.MobileID = "ABCDSSDSDS45";
+    $scope.validation= false;
+
+    $scope.current = true;
+  $scope.MobileID = "ABCDSSDSD99S45";
 
   $http.post(Domain + "getAllAppointments",{MobileID:$scope.MobileID}).then(function(response){
 
@@ -16,6 +18,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
     }else{
       console.log(response);
       $scope.showSpinner = false;
+        $scope.validation= true;
     }},function(error){
     console.log(error);
     $scope.showSpinner = false;
@@ -56,6 +59,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
   $scope.getAppointments = function (num) {
     $scope.appointments = [];
     $scope.showSpinner = true;
+      $scope.validation=false;
 
     if(num==0){
 
@@ -69,6 +73,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
         }else{
           console.log(response);
           $scope.showSpinner = false;
+            $scope.validation= true;
         }},function(error){
         console.log(error);
         $scope.showSpinner = false;
@@ -86,6 +91,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
         }else{
           console.log(response);
           $scope.showSpinner = false;
+            $scope.validation= true;
         }},function(error){
         console.log(error);
         $scope.showSpinner = false;

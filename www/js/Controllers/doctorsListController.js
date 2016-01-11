@@ -4,6 +4,7 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
   };
 
     $scope.cross='';
+    $scope.validation=false;
      $scope.clearSearch= function () {
         $scope.cross='';
     };
@@ -13,11 +14,13 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
 
             if(response){
                 console.log(response);
+
                 $scope.drarray = response.data.content;
                 console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
                 console.log($scope.drarray);
                 $scope.showSpinner = false;
             }
+
 
         },function(error){
             console.log(error);
@@ -32,11 +35,19 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
 
     if(response){
       console.log(response);
+        if(response.data.code!=200){
       $scope.drarray = response.data.content;
       console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
       console.log($scope.drarray);
       $scope.showSpinner = false;
+        }
+        else {
+            $scope.validation=true;
+            $scope.showSpinner = false
+
+        }
     }
+
 
   },function(error){
     console.log(error);

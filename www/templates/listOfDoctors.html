@@ -22,6 +22,7 @@
                     </label></div>
             </div>
 
+
             <div  ng-show="cross" class="col col-40 padding-top-19" ng-click="clearSearch()">
                 <i class="ion-close-circled ion-size-x"> </i>
             </div>
@@ -29,7 +30,16 @@
     </ion-header-bar>
 
     <ion-content class="content-margin-top">
+        <div class="row margin-top-14p">
+            <div class="col"></div>
+            <div class="col">
+                <i ng-show="validation" class="ion-android-sad icon-sad"></i> </div>
+            <div class="col"></div>
+        </div>
 
+        <div  class="margin-left-38p">
+            <p ng-show="validation"> Currently, Doctor Is Not Registered! </p>
+        </div>
       <div class="row" ng-if="showSpinner">
         <div class="col"></div>
         <div class="col" style="margin-left: 15%">

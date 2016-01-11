@@ -63,7 +63,16 @@
         <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # was <b> {{lists.AppointmentNumber}}</b></p>
       </div>
     </div>
+      <div class="row margin-top-14p">
+          <div class="col"></div>
+          <div class="col">
+              <i ng-show="validation" class="ion-android-sad icon-sad"></i> </div>
+          <div class="col"></div>
+      </div>
 
+      <div  class="margin-left-38p">
+          <p ng-show="validation"> No,  Current Appointments! </p>
+      </div>
     <div class="bottom-bar-adjustment"></div>
   </ion-content>
 </ion-view>

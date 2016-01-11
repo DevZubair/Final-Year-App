@@ -9,6 +9,7 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
   var doctor = localStorage.getItem('Doctor');
   $scope.doctorName = JSON.parse(doctor);
 
+
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
@@ -35,9 +36,9 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
 
     if(response){
       console.log(response);
-      $scope.drdetail = response.data.content;
-      $ionicBackdrop.release();
-    }
+
+            $scope.drdetail = response.data.content;
+      $ionicBackdrop.release();}
 
   },function(error){
     console.log(error);
