@@ -11,18 +11,20 @@
   </ion-nav-buttons>
   <ion-header-bar class="bar-light bar-subheader">
     <div class="row">
-      <div class="col col-50">
-        <div class="search-bar-adjustment">
-          <label class="item-input-wrapper search-background-color">
-            <i class="icon ion-ios-search placeholder-icon" ></i>
-            <input type="search" placeholder="Search" ng-model="cross"/>
-          </label>
+        <div class=" col col-10 ion-refresh icon-refresh-size" ng-click="refreshAll()">
         </div>
-      </div>
-      <div ng-show="cross" class="col col-30 padding-top-12" ng-click="clearSearch()">
-        <i class="ion-ios-close ion-size"></i>
+        <div class="col col-50">
+            <div class="searching-bar-adjustment">
+                <label class="item-input-wrapper search-background-color">
+                    <i class="icon ion-ios-search placeholder-icon"></i>
+                    <input type="search" placeholder="Search" ng-model="cross"/>
+                </label></div>
+        </div>
 
-      </div>
+        <div  ng-show="cross" class="col col-40 padding-top-19" ng-click="clearSearch()">
+            <i class="ion-close-circled ion-size-x"> </i>
+        </div>
+    </div>
 
     </div>
   </ion-header-bar>
