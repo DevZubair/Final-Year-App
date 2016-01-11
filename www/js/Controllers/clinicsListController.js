@@ -12,8 +12,14 @@ hospitalModule.controller('clinicsListController', function($scope,$ionicPopup,$
   $http.get(Domain + 'getAllClinics').then(function(response) {
     if(response){
       console.log(response);
-      $scope.allClinics = response.data.content;
-      $scope.showSpinner = false;
+      if(response.data.code == 200){
+        $scope.allClinics = response.data.content;
+        $scope.showSpinner = false;
+      }
+      else{
+
+      }
+
     }},function(error){
     console.log(error);
     $scope.showSpinner = false;
