@@ -8,6 +8,17 @@ hospitalModule.controller('clinicsListController', function($scope,$ionicPopup,$
   $scope.clearSearch= function () {
     $scope.cross='';
   };
+    $scope.refreshAll= function () {
+        $http.get(Domain + 'getAllClinics').then(function(response) {
+            if(response){
+                console.log(response);
+                $scope.allClinics = response.data.content;
+                $scope.showSpinner = false;
+            }},function(error){
+            console.log(error);
+            $scope.showSpinner = false;
+        });
+  };
 
   $http.get(Domain + 'getAllClinics').then(function(response) {
     if(response){
