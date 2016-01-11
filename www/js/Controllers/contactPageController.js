@@ -5,7 +5,9 @@ hospitalModule.controller('contactPageController', function($scope,$ionicPopup,$
   };
   $scope.ClinicID =  localStorage.getItem('ClinicID');
   $scope.DoctorID = localStorage.getItem('DoctorID');
+
   $scope.MobileID = 'ADFGNBBRCK';
+
   $scope.PatientFirstName = '';
   $scope.PatientLastName = '';
   $scope.PatientAge = '';
