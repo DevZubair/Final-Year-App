@@ -1,0 +1,34 @@
+.margin-top {
+  margin-top: 10%;
+}
+.font{
+  margin-left: 11%;
+  font-size: 125%;
+  color: #656565;
+
+}
+.icon-color{
+  color: darkred;
+  font-size: 250%;
+}
+.display-inline {
+  display: inline;
+}
+.font-thank{
+
+  font-size: 125%;
+  color: #656565;
+  text-align:  center;
+}
+.star{
+  color: yellow;
+  margin-left: 28%;
+  font-size: 250%;
+  margin-top:5%;
+}
+.button{
+  margin: 30px;
+}
+.margin-14px{
+  margin: 14px !important;
+}

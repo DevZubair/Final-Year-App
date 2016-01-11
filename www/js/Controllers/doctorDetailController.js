@@ -1,4 +1,4 @@
-hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http,hospitalFactory,$ionicBackdrop) {
+hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http,hospitalFactory,$ionicBackdrop,Domain) {
 
   $ionicBackdrop.retain();
 
@@ -31,7 +31,7 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
     });
   };
 
-  $http.post("https://fyp-server.herokuapp.com/getMachineDetail",{ClinicID:$scope.ClinicID, DoctorID:$scope.DoctorID}).then (function(response){
+  $http.post(Domain + "getMachineDetail",{ClinicID:$scope.ClinicID, DoctorID:$scope.DoctorID}).then (function(response){
 
     if(response){
       console.log(response);

@@ -81,6 +81,7 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
       .state('thanksPage', {
         url: '/thanksPage',
         templateUrl: 'templates/thanksPage.html',
+        controller: 'settingsController',
         cache: false
 
       })
