@@ -109,6 +109,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
   });
 
   $scope.showModal = function (detail) {
+    console.log(detail)
     $scope.pastAppointment = detail;
     $scope.modal.show();
   };

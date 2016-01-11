@@ -1,4 +1,4 @@
-hospitalModule.controller('appointmentDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,hospitalFactory, $http, Domain) {
+hospitalModule.controller('appointmentDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,hospitalFactory, $http, Domain,$timeout) {
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
@@ -35,6 +35,43 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     $scope.drdetail.CurrentNumber = data.nowServing;
     $scope.drdetail.WaitingPersons = data.inWaiting-1;
     $scope.$apply($scope.drdetail);
+    if($scope.drdetail.CurrentNumber == $scope.myNumber){
+      $scope.showPopup();
+    }
   });
+
+
+// Triggered on a button click, or some other target
+  $scope.showPopup = function() {
+    $scope.data = {};
+
+    // An elaborate, custom popup
+    var myPopup = $ionicPopup.show({
+      template: '',
+      title: 'Number served',
+      subTitle: 'Please Review the App',
+      scope: $scope,
+      buttons: [
+        { text: 'Leave' },
+        {
+          text: '<b>Review</b>',
+          type: 'button-positive',
+          onTap: function(e) {
+           $state.go('thanksPage');
+          }
+        }
+      ]
+    });
+
+    myPopup.then(function(res) {
+      console.log('Tapped!', res);
+    });
+
+
+    $timeout(function() {
+      myPopup.close(); //close the popup after 3 seconds for some reason
+    }, 3000);
+  };
+
 });
 
