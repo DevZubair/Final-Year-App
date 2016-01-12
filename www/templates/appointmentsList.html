@@ -63,16 +63,17 @@
         <p class="theme-font-brownish-color doctor-name-number font-size-12">Your # was <b> {{lists.AppointmentNumber}}</b></p>
       </div>
     </div>
-      <div class="row margin-top-14p">
-          <div class="col"></div>
-          <div class="col">
-              <i ng-show="validation" class="ion-android-sad icon-sad"></i> </div>
-          <div class="col"></div>
-      </div>
 
-      <div  class="margin-left-38p">
-          <p ng-show="validation"> No,  Current Appointments! </p>
-      </div>
+    <div ng-if="validation" class="row margin-top-14p">
+      <div class="col"></div>
+      <div class="col">
+        <i class="ion-android-sad icon-sad"></i> </div>
+      <div class="col"></div>
+    </div>
+
+    <div ng-if="validation" class="margin-left-38p">
+      <p class="text-center"> No Appointments Available </p>
+    </div>
     <div class="bottom-bar-adjustment"></div>
   </ion-content>
 </ion-view>
@@ -100,7 +101,7 @@
       </div>
 
       <div class="margin2">
-       <div><p class=" font dp-inline">First Name: {{pastAppointment.PatientFirstName}}</p></div>
+        <div><p class=" font dp-inline">First Name: {{pastAppointment.PatientFirstName}}</p></div>
         <div><p class=" font-size dp-inline">Last Name: {{pastAppointment.PatientLastName}}</p></div>
         <div><p class=" font-size dp-inline">Age: {{pastAppointment.PatientAge}}</p></div>
         <div><p class=" font-size dp-inline">Gender: {{pastAppointment.Gender}}</p></div>

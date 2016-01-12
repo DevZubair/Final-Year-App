@@ -3,30 +3,33 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
     $ionicSideMenuDelegate.toggleLeft();
   };
 
+  $scope.cross='';
+  $scope.validation=false;
+  $scope.clearSearch= function () {
     $scope.cross='';
-    $scope.validation=false;
-     $scope.clearSearch= function () {
-        $scope.cross='';
-    };
+  };
 
-    $scope.refreshAll= function () {
-        $http.post(Domain + "getClinicDoctors",{ClinicID:$scope.ID}).then (function(response){
+  $scope.refreshAll= function () {
+    $http.post(Domain + "getClinicDoctors",{ClinicID:$scope.ID}).then (function(response){
 
-            if(response){
-                console.log(response);
-
-                $scope.drarray = response.data.content;
-                console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
-                console.log($scope.drarray);
-                $scope.showSpinner = false;
-            }
-
-
-        },function(error){
-            console.log(error);
-            $scope.showSpinner = false;
-        });
-    };
+      if(response){
+        console.log(response);
+        if(response.data.code==200) {
+          $scope.drarray = response.data.content;
+          console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
+          console.log($scope.drarray);
+          $scope.showSpinner = false;
+        }
+        else {
+          $scope.validation=true;
+          $scope.showSpinner = false
+        }
+      }
+    },function(error){
+      console.log(error);
+      $scope.showSpinner = false;
+    });
+  };
 
   $scope.showSpinner = true;
   $scope.ID = localStorage.getItem('ClinicID');
@@ -35,17 +38,17 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
 
     if(response){
       console.log(response);
-        if(response.data.code!=200){
-      $scope.drarray = response.data.content;
-      console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
-      console.log($scope.drarray);
-      $scope.showSpinner = false;
-        }
-        else {
-            $scope.validation=true;
-            $scope.showSpinner = false
+      if(response.data.code==200){
+        $scope.drarray = response.data.content;
+        console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
+        console.log($scope.drarray);
+        $scope.showSpinner = false;
+      }
+      else {
+        $scope.validation=true;
+        $scope.showSpinner = false
 
-        }
+      }
     }
 
 

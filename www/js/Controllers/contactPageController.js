@@ -1,11 +1,11 @@
-hospitalModule.controller('contactPageController', function($scope,$ionicPopup,$state,$ionicBackdrop,$ionicSideMenuDelegate,hospitalFactory, $http, Domain ) {
+hospitalModule.controller('contactPageController', function($scope,MobileID,$ionicPopup,$state,$ionicBackdrop,$ionicSideMenuDelegate,hospitalFactory, $http, Domain ) {
 
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
   $scope.ClinicID =  localStorage.getItem('ClinicID');
   $scope.DoctorID = localStorage.getItem('DoctorID');
-  $scope.MobileID = 'ABCDSSDSD99S45';
+  $scope.MobileID = MobileID;
   $scope.PatientFirstName = '';
   $scope.PatientLastName = '';
   $scope.PatientAge = '';

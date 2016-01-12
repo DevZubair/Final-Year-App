@@ -1,4 +1,4 @@
-hospitalModule.controller('appointmentsListController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http,Domain,$ionicModal) {
+hospitalModule.controller('appointmentsListController', function($scope,MobileID,$ionicPopup,$state,$ionicSideMenuDelegate,$http,Domain,$ionicModal) {
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
@@ -7,7 +7,7 @@ hospitalModule.controller('appointmentsListController', function($scope,$ionicPo
     $scope.validation= false;
 
     $scope.current = true;
-  $scope.MobileID = "ABCDSSDSD99S45";
+  $scope.MobileID = MobileID;
 
   $http.post(Domain + "getAllAppointments",{MobileID:$scope.MobileID}).then(function(response){
 

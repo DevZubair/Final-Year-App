@@ -30,15 +30,15 @@
     </ion-header-bar>
 
     <ion-content class="content-margin-top">
-        <div class="row margin-top-14p">
+        <div class="row margin-top-14p" ng-if="validation">
             <div class="col"></div>
             <div class="col">
-                <i ng-show="validation" class="ion-android-sad icon-sad"></i> </div>
+                <i class="ion-android-sad icon-sad"></i> </div>
             <div class="col"></div>
         </div>
 
-        <div  class="margin-left-38p">
-            <p ng-show="validation"> Currently, Doctor Is Not Registered! </p>
+        <div ng-if="validation" class="margin-left-38p text-center">
+            <p> Currently, Doctor Is Not Registered! </p>
         </div>
       <div class="row" ng-if="showSpinner">
         <div class="col"></div>
@@ -71,7 +71,6 @@
             <div class="col padding-top-18">
                 <i class="icon ion-chevron-right float-right right-arrow-icon theme-font-grey-color font-size-16"></i>
             </div>
-
         </div>
 
              <div class="bottom-bar-adjustment"></div>

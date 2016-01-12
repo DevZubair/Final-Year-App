@@ -52,7 +52,10 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
       subTitle: 'Please Review the App',
       scope: $scope,
       buttons: [
-        { text: 'Leave' },
+        { text: 'Leave',
+          onTap: function(e) {
+            $state.go('appointmentsList');
+          }},
         {
           text: '<b>Review</b>',
           type: 'button-positive',
@@ -66,11 +69,6 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     myPopup.then(function(res) {
       console.log('Tapped!', res);
     });
-
-
-    $timeout(function() {
-      myPopup.close(); //close the popup after 3 seconds for some reason
-    }, 3000);
   };
 
 });
