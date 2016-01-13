@@ -22,13 +22,29 @@
 }
 .star{
   color: yellow;
-  margin-left: 28%;
-  font-size: 250%;
+  margin-left: 13%;
   margin-top:5%;
 }
 .button{
   margin: 30px;
 }
 .margin-14px{
-  margin: 14px !important;
+  margin: 20px !important;
+}
+.margin-2px{
+  margin: 2px !important;
+}
+.color-design{
+  border-color: darkred;
+  background-color: white;
+  color: #444;
+}
+ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 5px 10px;
+}
+ul.rating li i {
+  font-size: 30px;
 }

@@ -111,10 +111,12 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
   $scope.showModal = function (detail) {
     console.log(detail)
     $scope.pastAppointment = detail;
+    $scope.mycomment = $scope.pastAppointment.Reviews.comments;
     $scope.modal.show();
   };
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
   });
+
 });
 

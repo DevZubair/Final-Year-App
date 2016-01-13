@@ -11,8 +11,8 @@
 .dp-inline {
   display: inline;
 }
-.font-size{
-  margin-left: 11%;
+.font-label{
+  margin-left: 12%;
   font-size: 125%;
   color: #656565;
 }
@@ -34,3 +34,24 @@
   margin: 14px !important;
 }
 
+
+.horizontal-line{
+  width: 75%;
+  margin-top: 10%;
+  border-bottom: 1px solid  #D4D0D0;
+  margin-left: 10%;
+
+}
+.text-margin{
+  margin-left: 30%;
+}
+.font-bind{
+  margin-left: 11%;
+  color: #840909;!important;
+
+}
+.color-submit{
+  border-color: darkred;
+  background-color: white;
+  color: #444;
+}

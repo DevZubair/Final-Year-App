@@ -100,18 +100,39 @@
         </div>
       </div>
 
-      <div class="margin2">
-        <div><p class=" font dp-inline">First Name: {{pastAppointment.PatientFirstName}}</p></div>
-        <div><p class=" font-size dp-inline">Last Name: {{pastAppointment.PatientLastName}}</p></div>
-        <div><p class=" font-size dp-inline">Age: {{pastAppointment.PatientAge}}</p></div>
-        <div><p class=" font-size dp-inline">Gender: {{pastAppointment.Gender}}</p></div>
+      <div class="margin2 font-label">
+      <div class="row">
+        <div class="col">First Name :</div>
+        <div class="col font-bind">{{pastAppointment.PatientFirstName}}</div>
+      </div>
+      <div class="row">
+        <div class="col">Last Name :</div>
+        <div class="col font-bind">{{pastAppointment.PatientLastName}}</div>
+      </div>
+      <div class="row">
+        <div class="col">Age :</div>
+        <div class="col font-bind">{{pastAppointment.PatientAge}}</div>
+      </div>
+      <div class="row">
+        <div class="col">Gender :</div>
+        <div class="col font-bind">{{pastAppointment.PatientLastName}}</div>
+      </div>
+        </div>
+
+
+
+        <div class="horizontal-line"></div>
         <p class="font-review margin2">Your Reviews</p>
+
         <div class="rating star1">
           <span>☆</span><span>☆</span><span>☆</span>
         </div>
         <label class="item item-input margin2-14px">
-          <textarea placeholder="Comments"></textarea>
+          <textarea ng-model="mycomment" placeholder="Comments"></textarea>
         </label>
+      <div class="row">
+        <button class="button button-block color-submit">Submit</button>
+      </div>
 
 
 

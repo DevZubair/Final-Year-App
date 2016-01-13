@@ -49,7 +49,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     var myPopup = $ionicPopup.show({
       template: '',
       title: 'Number served',
-      subTitle: 'Please Review the App',
+      subTitle: 'Please Rate our App',
       scope: $scope,
       buttons: [
         { text: 'Leave',
@@ -57,7 +57,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
             $state.go('appointmentsList');
           }},
         {
-          text: '<b>Review</b>',
+          text: '<b>Rate</b>',
           type: 'button-positive',
           onTap: function(e) {
            $state.go('thanksPage');

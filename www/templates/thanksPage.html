@@ -17,14 +17,14 @@
       </div>
       <p class="font-thank margin-top">Thank You</p>
       <div class="rating star">
-        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        <rating ng-model="data.rating" max="data.max" ></rating>
       </div>
       <label class="item item-input margin-14px">
-        <textarea placeholder="Comments"></textarea>
+        <textarea ng-model="$parent.myComments" rows="4" cols="50" placeholder="Comments" ></textarea>
       </label>
-      <button class="button button-outline button-positive">
-        Comment
-      </button>
+      <div class="row">
 
+        <button class="button button-block margin-2px color-design" ng-click="thanks()">Comment</button>
+      </div>
     </ion-content>
 </ion-view>
