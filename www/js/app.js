@@ -106,5 +106,5 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
   })
   .constant({
     Domain : 'http://localhost:3000/',
-    MobileID : 'ABCDSSDSD99S45'
+    MobileID : 'JHSGDHSBDJHDSGSDHG'
   });
