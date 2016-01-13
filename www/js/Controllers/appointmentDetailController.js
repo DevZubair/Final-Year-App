@@ -66,7 +66,6 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
             ]
         });
 
-
         myPopup.then(function(res) {
             console.log('Tapped!', res);
         });
