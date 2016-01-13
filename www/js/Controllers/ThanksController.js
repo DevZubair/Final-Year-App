@@ -4,7 +4,7 @@ hospitalModule.controller('ThanksController', function($scope,$ionicPopup,$state
   };
   $scope.ClinicID = localStorage.getItem('ClinicID');
   $scope.DoctorID = localStorage.getItem('DoctorID');
-  $scope.AppointmentID = localStorage.getItem('AppointmentID');
+  $scope.AppointmentID = localStorage.getItem('appointID');
   $scope.MobileID = MobileID;
 
   $scope.myComments= '';

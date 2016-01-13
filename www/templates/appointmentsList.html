@@ -101,38 +101,38 @@
       </div>
 
       <div class="margin2 font-label">
-      <div class="row">
-        <div class="col">First Name :</div>
-        <div class="col font-bind">{{pastAppointment.PatientFirstName}}</div>
-      </div>
-      <div class="row">
-        <div class="col">Last Name :</div>
-        <div class="col font-bind">{{pastAppointment.PatientLastName}}</div>
-      </div>
-      <div class="row">
-        <div class="col">Age :</div>
-        <div class="col font-bind">{{pastAppointment.PatientAge}}</div>
-      </div>
-      <div class="row">
-        <div class="col">Gender :</div>
-        <div class="col font-bind">{{pastAppointment.PatientLastName}}</div>
-      </div>
+        <div class="row">
+          <div class="col">First Name :</div>
+          <div class="col font-bind">{{pastAppointment.PatientFirstName}}</div>
         </div>
+        <div class="row">
+          <div class="col">Last Name :</div>
+          <div class="col font-bind">{{pastAppointment.PatientLastName}}</div>
+        </div>
+        <div class="row">
+          <div class="col">Age :</div>
+          <div class="col font-bind">{{pastAppointment.PatientAge}}</div>
+        </div>
+        <div class="row">
+          <div class="col">Gender :</div>
+          <div class="col font-bind">{{pastAppointment.PatientLastName}}</div>
+        </div>
+      </div>
 
-        <div class="horizontal-line"></div>
-        <p class="font-review margin2">Your Reviews</p>
+      <div class="horizontal-line"></div>
+      <p class="font-review margin2">Your Reviews</p>
 
       <div class="rating star">
         <rating ng-model="data.rating" max="data.max"></rating>
       </div>
-        <label class="item item-input margin2-14px" ng-if="user.comments == ''">
-          <textarea placeholder="Comments" rows="4" cols="50" ng-model="user.comments"></textarea>
-        </label>
-      <label class="item item-input margin2-14px" ng-if="user.comments != ''">
-          <p>{{user.comments}}</p>
-        </label>
+      <label class="item item-input margin2-14px">
+        <textarea placeholder="Comments" rows="4" cols="50" ng-model="user.comments"></textarea>
+      </label>
+      <!--<label class="item item-input margin2-14px" ng-if="pastAppointment.Reviews.comments != ''">
+        <p>{{user.comments}}</p>
+      </label>-->
       <div class="row" ng-click="thanks()">
-        <button class="button button-block color-submit" ng-if="user.comments == ''">Submit</button>
+        <button class="button button-block color-submit">Submit</button>
       </div>
     </ion-content>
   </ion-modal-view>
