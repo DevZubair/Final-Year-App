@@ -104,7 +104,7 @@ var hospitalModule = angular.module('hospitalModule', ['ionic'])
     $urlRouterProvider.otherwise('/clinicsList');
 
   })
-    .constant({
-        Domain : 'http://fyp-server.herokuapp.com/',
-        MobileID : 'ABCDSSDSD99S45'
-    });
+  .constant({
+    Domain : 'http://localhost:3000/',
+    MobileID : 'ABCDSSDSD99S45'
+  });
