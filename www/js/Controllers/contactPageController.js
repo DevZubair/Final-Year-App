@@ -40,7 +40,7 @@ hospitalModule.controller('contactPageController', function($scope,MobileID,$ion
           $ionicBackdrop.release();
           $state.go('appointmentDetail')
         }
-        else if(response.data.code == 400){
+        else{
           $scope.showAlert();
           $ionicBackdrop.release();
         }
