@@ -1,4 +1,4 @@
-hospitalModule.controller('appointmentDetailController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,hospitalFactory, $http, Domain,$timeout) {
+hospitalModule.controller('appointmentDetailController', function($scope,$ionicPopup,$state,MobileID, $ionicSideMenuDelegate,hospitalFactory, $http, Domain,$timeout) {
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
@@ -49,7 +49,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     var myPopup = $ionicPopup.show({
       template: '',
       title: 'Number served',
-      subTitle: 'Please Rate our App',
+      subTitle: 'Please rate our App',
       scope: $scope,
       buttons: [
         { text: 'Leave',
@@ -60,7 +60,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
           text: '<b>Rate</b>',
           type: 'button-positive',
           onTap: function(e) {
-           $state.go('thanksPage');
+            $state.go('thanksPage');
           }
         }
       ]
@@ -71,5 +71,97 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     });
   };
 
-});
+  $scope.showReschedule = function() {
+    $http.post(Domain + "getMachineDetail",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID}).then (function(response){
 
+      if(response.data.code==200){
+        $scope.rescheduleNumber = response.data.content.TotalAppointments + 1;
+        var confirmPopup = $ionicPopup.confirm({
+          title: 'Reschedule Appointment',
+          template: 'Are you sure you want reschedule your appointment?'
+        });
+
+        confirmPopup.then(function(res) {
+          if(res) {
+            console.log('You are sure');
+            confirmPopup.close();
+            $scope.confirmation($scope.rescheduleNumber);
+
+          } else {
+            console.log('You are not sure');
+          }
+        });
+      }
+      else{
+        $scope.alertFunct();
+      }
+
+    },function(error){
+      console.log(error);
+      $scope.alertFunct();
+
+    });
+
+  };
+  $scope.confirmation = function(number) {
+
+    var confirmPopup = $ionicPopup.confirm({
+      title: 'Your next number will be' + number,
+      template: 'Are you sure you want schedule your appointment?'
+    });
+
+    confirmPopup.then(function(res) {
+      if(res) {
+        console.log('You are sure');
+        $http.post(Domain + "rescheduleNumber",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID , MobileID:MobileID }).then (function(response){
+
+          if(response.data.code==200){
+            localStorage.setItem('appointNumber', response.data.content);
+            $scope.myNumber=response.data.content;
+          }
+          else{
+            confirmPopup.close();
+            $scope.alertFunct();
+          }
+
+        },function(error){
+          console.log(error);
+          confirmPopup.close();
+          $scope.alertFunct();
+
+        });
+      } else {
+        console.log('You are not sure');
+      }
+    });
+  };
+  $scope.showCancel = function() {
+    console.log('efefge')
+    var confirmPopup = $ionicPopup.confirm({
+      title: 'Cancel Appointment',
+      template: 'Are you sure you want cancel your appointment?'
+    });
+
+    confirmPopup.then(function(res) {
+      if(res) {
+        console.log('You are sure');
+        $state.go('clinicsList');
+
+      } else {
+        console.log('You are not sure');
+      }
+    });
+  };
+  $scope.alertFunct=function(){
+    var alertPopup = $ionicPopup.alert({
+      title: 'Sorry!',
+      template: 'Sorry for the inconvenience '
+    });
+
+    alertPopup.then(function(res) {
+      console.log('error');
+    });
+
+  }
+
+});

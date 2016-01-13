@@ -104,6 +104,7 @@ var hospitalModule = angular.module('hospitalModule', ['ionic','ionic.rating'])
     $urlRouterProvider.otherwise('/clinicsList');
 
   })
+
     .constant({
         Domain : 'http://fyp-server.herokuapp.com/',
         MobileID : 'AAAAAAAAAAAAAAAAA'
