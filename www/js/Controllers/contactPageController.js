@@ -37,6 +37,7 @@ hospitalModule.controller('contactPageController', function($scope,MobileID,$ion
         console.log(response);
         if (response.data.code == 200){
           localStorage.setItem('appointNumber',response.data.AppointmentNumber);
+          localStorage.setItem('appointID',response.data.content._id);
           $ionicBackdrop.release();
           $state.go('appointmentDetail')
         }

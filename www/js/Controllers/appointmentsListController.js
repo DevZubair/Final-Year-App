@@ -62,6 +62,8 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
   });
 
   $scope.appointmentDetail = function (device) {
+    $scope.AppointmentID = device._id;
+    localStorage.setItem('appointID',device._id);
     if(device.Past == true){
       $scope.ClinicID = device.ClinicID;
       $scope.DoctorID = device.DoctorID;
@@ -139,7 +141,7 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
   });
 
   $scope.$watch('data.rating', function() {
-   // console.log('New value: '+ $scope.data.rating);
+    // console.log('New value: '+ $scope.data.rating);
     $scope.rate = $scope.data.rating;
   });
 
@@ -150,6 +152,7 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
       DoctorID: $scope.DoctorID,
       MobileID: $scope.MobileID,
       comments:$scope.user.comments,
+      AppointID : $scope.AppointmentID,
       rating:$scope.rate
 
     }).then(function (response) {

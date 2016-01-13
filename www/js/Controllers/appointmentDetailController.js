@@ -10,6 +10,8 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
   var clinic = localStorage.getItem('Clinic');
   $scope.clinicName = JSON.parse(clinic);
 
+  $scope.AppointmentID = localStorage.getItem('appointID');
+
   $http.post(Domain + "getMachineDetail",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID}).then (function(response){
 
     if(response){
@@ -60,6 +62,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
           text: '<b>Rate</b>',
           type: 'button-positive',
           onTap: function(e) {
+
             $state.go('thanksPage');
           }
         }
@@ -113,7 +116,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     confirmPopup.then(function(res) {
       if(res) {
         console.log('You are sure');
-        $http.post(Domain + "rescheduleNumber",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID , MobileID:MobileID }).then (function(response){
+        $http.post(Domain + "rescheduleNumber",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID , MobileID:MobileID, AppointID:$scope.AppointmentID }).then (function(response){
 
           if(response.data.code==200){
             localStorage.setItem('appointNumber', response.data.content);
@@ -136,7 +139,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     });
   };
   $scope.showCancel = function() {
-    console.log('efefge')
+    console.log('efefge');
     var confirmPopup = $ionicPopup.confirm({
       title: 'Cancel Appointment',
       template: 'Are you sure you want cancel your appointment?'
@@ -145,7 +148,23 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     confirmPopup.then(function(res) {
       if(res) {
         console.log('You are sure');
-        $state.go('clinicsList');
+        $http.post(Domain + "cancelNumber",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID , MobileID:MobileID, AppointID:$scope.AppointmentID }).then (function(response){
+
+          if(response.data.code==200){
+            $state.go('clinicsList');
+          }
+          else{
+            confirmPopup.close();
+            $scope.alertFunct();
+          }
+
+        },function(error){
+          console.log(error);
+          confirmPopup.close();
+          $scope.alertFunct();
+
+        });
+
 
       } else {
         console.log('You are not sure');
