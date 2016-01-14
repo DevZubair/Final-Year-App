@@ -12,7 +12,7 @@ hospitalModule.controller('ThanksController', function($scope,$ionicPopup,$state
 
   $scope.rating = 4;
   $scope.data = {
-    rating : 1,
+    rating : 3,
     max: 5
   };
 

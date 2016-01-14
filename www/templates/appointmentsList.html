@@ -125,13 +125,13 @@
       <div class="rating star">
         <rating ng-model="data.rating" max="data.max"></rating>
       </div>
-      <label class="item item-input margin2-14px" ng-if="conditionComment == null">
+      <label class="item item-input margin2-14px" ng-if="conditionComment == null || conditionComment == ''">
         <textarea placeholder="Comments" rows="4" cols="50" ng-model="user.comments"></textarea>
       </label>
-      <label class="item item-input margin2-14px" ng-if="conditionComment != null">
+      <label class="item item-input margin2-14px" ng-if="conditionComment != null && conditionComment != ''">
         <p>{{user.comments}}</p>
       </label>
-      <div class="row" ng-click="thanks()">
+      <div class="row" ng-click="thanks()" ng-if="conditionComment == null || conditionComment == ''">
         <button class="button button-block color-submit">Submit</button>
       </div>
     </ion-content>

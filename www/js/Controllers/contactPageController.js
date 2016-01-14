@@ -55,7 +55,7 @@ hospitalModule.controller('contactPageController', function($scope,MobileID,$ion
   $scope.showAlert = function() {
     var alertPopup = $ionicPopup.alert({
       title: 'Appointment Found',
-      template: 'You are already having an appointment with this doctor today. Please check.'
+      template: 'You already had an appointment today with this doctor. Thanks'
     });
 
     alertPopup.then(function(res) {

@@ -11,7 +11,7 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
 
   $scope.rating = 4;
   $scope.data = {
-    rating : 1,
+    rating : 3,
     max: 5
   };
   $scope.user = {

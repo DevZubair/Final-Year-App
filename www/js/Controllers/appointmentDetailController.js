@@ -37,7 +37,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     $scope.drdetail.CurrentNumber = data.nowServing;
     $scope.drdetail.WaitingPersons = data.inWaiting-1;
     $scope.$apply($scope.drdetail);
-    if($scope.drdetail.CurrentNumber == $scope.myNumber){
+    if($scope.drdetail.CurrentNumber == localStorage.getItem('appointNumber')){
       $scope.showPopup();
     }
   });
@@ -139,7 +139,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     });
   };
   $scope.showCancel = function() {
-    console.log('efefge');
+
     var confirmPopup = $ionicPopup.confirm({
       title: 'Cancel Appointment',
       template: 'Are you sure you want cancel your appointment?'
@@ -147,24 +147,37 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
 
     confirmPopup.then(function(res) {
       if(res) {
-        console.log('You are sure');
-        $http.post(Domain + "cancelNumber",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID , MobileID:MobileID, AppointID:$scope.AppointmentID }).then (function(response){
-
-          if(response.data.code==200){
-            $state.go('clinicsList');
-          }
-          else{
-            confirmPopup.close();
-            $scope.alertFunct();
-          }
-
-        },function(error){
-          console.log(error);
-          confirmPopup.close();
-          $scope.alertFunct();
-
+        var confirmPopups = $ionicPopup.confirm({
+          title: 'Be Sure',
+          template: 'You will not be allowed to take the appointment again today'
         });
 
+        confirmPopups.then(function(res) {
+          if(res) {
+            console.log('You are sure');
+            $http.post(Domain + "cancelNumber",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID , MobileID:MobileID, AppointID:$scope.AppointmentID }).then (function(response){
+
+              if(response.data.code==200){
+                $state.go('clinicsList');
+              }
+              else{
+                confirmPopups.close();
+                confirmPopup.close();
+                $scope.alertFunct();
+              }
+
+            },function(error){
+              console.log(error);
+              confirmPopups.close();
+              confirmPopup.close();
+              $scope.alertFunct();
+
+            });
+
+          } else {
+            console.log('You are not sure');
+          }
+        });
 
       } else {
         console.log('You are not sure');
