@@ -142,7 +142,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
 
     var confirmPopup = $ionicPopup.confirm({
       title: 'Cancel Appointment',
-      template: 'Are you sure you want cancel your appointment?'
+      template: 'Are you sure you want to cancel your appointment?'
     });
 
     confirmPopup.then(function(res) {
