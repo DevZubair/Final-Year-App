@@ -133,6 +133,7 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
     console.log(detail);
     $scope.AppointmentID = detail._id;
     localStorage.setItem('appointID',detail._id);
+    $scope.conditionComment = detail.Reviews.comments;
     $scope.pastAppointment = detail;
     $scope.user.comments = $scope.pastAppointment.Reviews.comments;
     $scope.data.rating = $scope.pastAppointment.Reviews.stars;

@@ -125,12 +125,12 @@
       <div class="rating star">
         <rating ng-model="data.rating" max="data.max"></rating>
       </div>
-      <label class="item item-input margin2-14px">
+      <label class="item item-input margin2-14px" ng-if="conditionComment == null">
         <textarea placeholder="Comments" rows="4" cols="50" ng-model="user.comments"></textarea>
       </label>
-      <!--<label class="item item-input margin2-14px" ng-if="pastAppointment.Reviews.comments != ''">
+      <label class="item item-input margin2-14px" ng-if="conditionComment != null">
         <p>{{user.comments}}</p>
-      </label>-->
+      </label>
       <div class="row" ng-click="thanks()">
         <button class="button button-block color-submit">Submit</button>
       </div>
