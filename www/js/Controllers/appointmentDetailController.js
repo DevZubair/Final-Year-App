@@ -109,8 +109,8 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
   $scope.confirmation = function(number) {
 
     var confirmPopup = $ionicPopup.confirm({
-      title: 'Your next number will be' + number,
-      template: 'Are you sure you want schedule your appointment?'
+      title: 'Your next number will be ' + number,
+      template: 'Are you sure you want reschedule your appointment?'
     });
 
     confirmPopup.then(function(res) {
@@ -124,7 +124,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
           }
           else{
             confirmPopup.close();
-            $scope.alertFunct();
+            $scope.alertFunct('Seems like you have already rescheduled before');
           }
 
         },function(error){
@@ -171,15 +171,28 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
       }
     });
   };
-  $scope.alertFunct=function(){
-    var alertPopup = $ionicPopup.alert({
-      title: 'Sorry!',
-      template: 'Sorry for the inconvenience '
-    });
+  $scope.alertFunct=function(msg){
+    if(msg){
+      var alertPopups = $ionicPopup.alert({
+        title: 'Sorry!',
+        template: msg
+      });
 
-    alertPopup.then(function(res) {
-      console.log('error');
-    });
+      alertPopups.then(function(res) {
+        console.log('error');
+      });
+    }
+    else{
+      var alertPopup = $ionicPopup.alert({
+        title: 'Sorry!',
+        template: 'Sorry for the inconvenience '
+      });
+
+      alertPopup.then(function(res) {
+        console.log('error');
+      });
+    }
+
 
   }
 

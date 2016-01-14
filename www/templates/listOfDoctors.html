@@ -48,7 +48,7 @@
         <div class="col"></div>
       </div>
 
-        <div class="row viewBackground margin-top-2 div-gap-margin" ui-sref="doctorDetail" ng-click="sendDoctorDetail(contents)" ng-repeat="contents in drarray">
+        <div class="row viewBackground margin-top-2 div-gap-margin" ui-sref="doctorDetail" ng-click="sendDoctorDetail(contents)" ng-repeat="contents in drarray | filter:cross">
             <div class=" col col-10 numberCircle">
                 <p class="margin-top-2">{{$index+1}}</p>
             </div>
