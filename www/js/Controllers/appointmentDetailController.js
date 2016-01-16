@@ -42,6 +42,13 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
     }
   });
 
+  socket.on('appointmentAdded', function (data) {
+    console.log(data);
+    if(data.DoctorID ==  $scope.DoctorID && $scope.drdetail!= undefined){
+      $scope.drdetail.WaitingPersons =  $scope.drdetail.WaitingPersons + 1;
+      $scope.$apply($scope.drdetail);
+    }
+  });
 
 // Triggered on a button click, or some other target
   $scope.showPopup = function() {

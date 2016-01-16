@@ -48,17 +48,20 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
 
   socket.on('device_active', function (data) {
     console.log('Doctor :' + data.doctorID +'called pulse counter');
-    var ___Realtime = $scope.appointments.map(function (item) {
-      return item.DoctorID
-    }).indexOf(data.doctorID);
-    if(___Realtime >=0){
-      $scope.appointments[___Realtime].DeviceNumber = data.nowServing;
-      $scope.$apply($scope.appointments);
-      if(data.nowServing == $scope.appointments[___Realtime].AppointmentNumber){
-        $scope.appointments[___Realtime].Past = true;
+    if($scope.appointments != undefined){
+      var ___Realtime = $scope.appointments.map(function (item) {
+        return item.DoctorID
+      }).indexOf(data.doctorID);
+      if(___Realtime >=0){
+        $scope.appointments[___Realtime].DeviceNumber = data.nowServing;
         $scope.$apply($scope.appointments);
+        if(data.nowServing == $scope.appointments[___Realtime].AppointmentNumber){
+          $scope.appointments[___Realtime].Past = true;
+          $scope.$apply($scope.appointments);
+        }
       }
     }
+
   });
 
   $scope.appointmentDetail = function (device) {

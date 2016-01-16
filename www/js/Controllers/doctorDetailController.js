@@ -17,16 +17,14 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
   socket.on('device_active', function (data) {
     console.log('updated');
     $scope.drdetail.CurrentNumber = data.nowServing;
-    $scope.drdetail.WaitingPersons = data.inWaiting-1;
+    $scope.drdetail.WaitingPersons = data.inWaiting;
     $scope.$apply($scope.drdetail);
-    if($scope.drdetail.CurrentNumber == localStorage.getItem('appointNumber')){
-      $scope.showPopup();
-    }
+
   });
 
   socket.on('appointmentAdded', function (data) {
     console.log(data);
-    if(data.DoctorID ==  $scope.DoctorID){
+    if(data.DoctorID ==  $scope.DoctorID && $scope.drdetail!= undefined){
       $scope.drdetail.WaitingPersons =  $scope.drdetail.WaitingPersons + 1;
       $scope.$apply($scope.drdetail);
     }
