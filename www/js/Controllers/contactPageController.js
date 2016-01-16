@@ -3,6 +3,14 @@ hospitalModule.controller('contactPageController', function($scope,MobileID,$ion
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
+  //Socket connection
+  var socket = io.connect(Domain);
+  socket.on('connect', function(){
+
+    console.log('Connected to socket');
+
+  });
+
   $scope.ClinicID =  localStorage.getItem('ClinicID');
   $scope.DoctorID = localStorage.getItem('DoctorID');
   $scope.MobileID = MobileID;
@@ -36,6 +44,20 @@ hospitalModule.controller('contactPageController', function($scope,MobileID,$ion
       if(response){
         console.log(response);
         if (response.data.code == 200){
+
+          socket.emit('appointmentAdded', {
+            ClinicID:$scope.ClinicID,
+            MobileID : $scope.MobileID,
+            DoctorID:$scope.DoctorID,
+            PatientFirstName : $scope.PatientFirstName,
+            PatientLastName :  $scope.PatientLastName,
+            PatientAge :  $scope.PatientAge,
+            Gender : $scope.PatientGender,
+            DoctorName : doctor.DoctorFirstName + ' ' + doctor.DoctorLastName,
+            ClinicName : clinic.Name,
+            Maker : 'Mobile'
+          });
+
           localStorage.setItem('appointNumber',response.data.AppointmentNumber);
           localStorage.setItem('appointID',response.data.content._id);
           $ionicBackdrop.release();
