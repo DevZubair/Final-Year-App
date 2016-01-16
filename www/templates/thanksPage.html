@@ -13,9 +13,10 @@
 
       <div class="margin-top">
         <p class="font display-inline">Your Number has been served</p>
-        <i class="ion-ios-checkmark-outline icon-color"></i>
+        <i class="ion-ios-checkmark icon-color"></i>
       </div>
-      <p class="font-thank margin-top">Thank You</p>
+
+      <p class=" card font-thank margin-top">Leave a rating and comment</p>
       <div class="rating star">
         <rating ng-model="data.rating" max="data.max" ></rating>
       </div>
@@ -24,8 +25,10 @@
       </label>
 
       <div class="row">
+ <div class="col"></div>
+          <div class="col"></div>
+       <div class="col"> <button class="button button-small margin-2px color-design" ng-click="thanks()">Comment</button></div>
 
-        <button class="button button-block margin-2px color-design" ng-click="thanks()">Comment</button>
       </div>
     </ion-content>
 </ion-view>

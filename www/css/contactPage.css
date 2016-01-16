@@ -47,3 +47,8 @@
 .ok-image-width img{
   width: 75px;
 }
+.Invalid-color {
+    color: #c92420;
+    margin-left: 10%;
+    font-size: 15px;
+}
