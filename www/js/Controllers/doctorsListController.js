@@ -1,4 +1,4 @@
-hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,hospitalFactory,$http,Domain) {
+hospitalModule.controller('doctorsListController', function($scope,$ionicBackdrop,$ionicPopup,$state,$ionicSideMenuDelegate,hospitalFactory,$http,Domain) {
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
@@ -10,6 +10,7 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
   };
 
   $scope.refreshAll= function () {
+      $ionicBackdrop.retain();
     $http.post(Domain + "getClinicDoctors",{ClinicID:$scope.ID}).then (function(response){
 
       if(response){
@@ -18,6 +19,7 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicPopup,$
           $scope.drarray = response.data.content;
           console.log('++++++++++++++++++++ DARRAY : +++++++++++++++++++++');
           console.log($scope.drarray);
+            $ionicBackdrop.release();
           $scope.showSpinner = false;
         }
         else {

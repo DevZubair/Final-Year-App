@@ -1,4 +1,4 @@
-hospitalModule.controller('clinicsListController', function($scope,$ionicPopup,$state,$ionicSideMenuDelegate,$http,hospitalFactory,Domain) {
+hospitalModule.controller('clinicsListController', function($scope,$ionicBackdrop, $ionicPopup,$state,$ionicSideMenuDelegate,$http,hospitalFactory,Domain) {
     $scope.toggleLeft = function () {
         $ionicSideMenuDelegate.toggleLeft();
     };
@@ -6,20 +6,28 @@ hospitalModule.controller('clinicsListController', function($scope,$ionicPopup,$
     $scope.cross='';
     $scope.validation=false;
 
+
     $scope.clearSearch= function () {
         $scope.cross='';
     };
+
     $scope.refreshAll= function () {
+        $ionicBackdrop.retain();
         $http.get(Domain + 'getAllClinics').then(function(response) {
-            if(response){
-                console.log(response);
-                $scope.allClinics = response.data.content;
+                if(response){
+
+                    console.log(response);
+                    $scope.allClinics = response.data.content;
+                    $ionicBackdrop.release();
+                    $scope.showSpinner = false;
+                }},
+            function(error){
+                console.log(error);
+                $ionicBackdrop.release();
                 $scope.showSpinner = false;
-            }},function(error){
-            console.log(error);
-            $scope.showSpinner = false;
-        });
+            });
     };
+
 
     $http.get(Domain + 'getAllClinics').then(function(response) {
         if(response){
@@ -41,12 +49,9 @@ hospitalModule.controller('clinicsListController', function($scope,$ionicPopup,$
 
 
     });
-
     $scope.changeState=function(clinic)
     {
         hospitalFactory.getterName(clinic);
         $state.go('doctorsList');
     };
-
-
 });

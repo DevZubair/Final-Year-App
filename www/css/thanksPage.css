@@ -8,20 +8,21 @@
 
 }
 .icon-color{
-  color: darkred;
-  font-size: 250%;
+  color:  #c92420;
+  font-size: 125%;
 }
 .display-inline {
   display: inline;
 }
 .font-thank{
-
+    padding-top: 7px;
+    padding-bottom: 7px;
   font-size: 125%;
   color: #656565;
   text-align:  center;
 }
 .star{
-  color: yellow;
+  color: #ffbf0f;
   margin-left: 13%;
   margin-top:5%;
 }
@@ -29,15 +30,17 @@
   margin: 30px;
 }
 .margin-14px{
-  margin: 20px !important;
+  margin-top: 20px !important;
+    margin-left: 11px;
+    margin-right: 11px;
 }
 .margin-2px{
-  margin: 2px !important;
+  margin: 13px !important;
 }
 .color-design{
-  border-color: darkred;
-  background-color: white;
-  color: #444;
+  border-color: #c92420;
+  background-color: #c92420;
+  color: #ffffff;
 }
 ul.rating li {
   display: inline;

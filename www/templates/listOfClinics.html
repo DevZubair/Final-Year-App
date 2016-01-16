@@ -34,6 +34,7 @@
 
       <div  class="margin-left-38p">
           <p ng-show="validation"> Currently, Clinic Is Not Registered! </p>
+
           </div>
 
 
@@ -49,11 +50,13 @@
       <div class="col"></div>
     </div>
     <div class="list  margin-top-10">
-      <div class="item item-avatar margin-top-10" ng-click="changeState(list)" ng-repeat="list in allClinics | filter:cross">
-        <img src="img\logo.png">
-        <h2>{{list.Name}}</h2>
+      <div class="item item-avatar margin-top-10" ng-click="changeState(list)" ng-repeat="list in allClinics | filter:cross" >
+      <img src="img\logo.png">
+          <h2>{{list.Name}}</h2>
         <p>{{list.Location}}</p>
+
       </div>
+
     </div>
 
   </ion-content>
