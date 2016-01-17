@@ -1,9 +1,9 @@
 .margin-top {
   margin-top: 10%;
 }
-.font{
+.font-served{
   margin-left: 11%;
-  font-size: 125%;
+  font-size: 130%;
   color: #656565;
 
 }
@@ -17,9 +17,10 @@
 .font-thank{
     padding-top: 7px;
     padding-bottom: 7px;
-  font-size: 125%;
-  color: #656565;
+  font-size: 130%;
+  color:#c92420;
   text-align:  center;
+
 }
 .star{
   color: #ffbf0f;
@@ -34,8 +35,8 @@
     margin-left: 11px;
     margin-right: 11px;
 }
-.margin-2px{
-  margin: 13px !important;
+.margin-left-29px{
+    margin-left: 29px;
 }
 .color-design{
   border-color: #c92420;
