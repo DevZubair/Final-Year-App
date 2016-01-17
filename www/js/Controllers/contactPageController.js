@@ -1,4 +1,4 @@
-hospitalModule.controller('contactPageController', function($scope,MobileID,$ionicPopup,$state,$ionicBackdrop,$ionicSideMenuDelegate,hospitalFactory, $http, Domain ) {
+hospitalModule.controller('contactPageController', function($scope,$ionicPlatform,$cordovaPush,MobileID,$ionicPopup,$state,$ionicBackdrop,$ionicSideMenuDelegate,hospitalFactory, $http, Domain ) {
 
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
@@ -80,7 +80,7 @@ hospitalModule.controller('contactPageController', function($scope,MobileID,$ion
           console.log(error);
         });
     }
-    ;
+
     $scope.showAlert = function () {
       var alertPopup = $ionicPopup.alert({
         title: 'Appointment Found',
@@ -91,6 +91,95 @@ hospitalModule.controller('contactPageController', function($scope,MobileID,$ion
         console.log('Appointment found');
       });
     };
-  }
+  };
+
+  //All code below is for push notifications
+
+ /* $scope.notifications = [];
+
+  // call to register automatically upon device ready
+
+  // Register
+  var register = function () {
+    var config = null;
+
+    if (ionic.Platform.isAndroid()) {
+      config = {
+        "senderID": "YOUR_GCM_PROJECT_ID" // REPLACE THIS WITH YOURS FROM GCM CONSOLE - also in the project URL like: https://console.developers.google.com/project/434205989073
+      };
+    }
+    else if (ionic.Platform.isIOS()) {
+      config = {
+        "badge": "true",
+        "sound": "true",
+        "alert": "true"
+      }
+    }
+
+    $cordovaPush.register(config).then(function (result) {
+      console.log("Register success " + result);
+
+      $scope.registerDisabled=true;
+      // ** NOTE: Android regid result comes back in the pushNotificationReceived, only iOS returned here
+      if (ionic.Platform.isIOS()) {
+        $scope.regId = result;
+        localStorage.setItem('RegID' , result);
+      }
+    }, function (err) {
+      console.log("Register error " + err)
+    });
+  };
+
+  // Notification Received
+  $scope.$on('$cordovaPush:notificationReceived', function (event, notification) {
+    console.log(JSON.stringify([notification]));
+    if (ionic.Platform.isAndroid()) {
+      switch(notification.event) {
+        case 'registered':
+          if (notification.regid.length > 0 ) {
+            alert('registration ID = ' + notification.regid);
+            localStorage.setItem('RegID' , notification.regid);
+          }
+          break;
+
+        case 'message':
+          // this is the actual push notification. its format depends on the data model from the push server
+          alert('message = ' + notification.message + ' msgCount = ' + notification.msgcnt);
+          break;
+
+        case 'error':
+          alert('GCM error = ' + notification.msg);
+          break;
+
+        default:
+          alert('An unknown GCM event has occurred');
+          break;
+      }
+    }
+    else if (ionic.Platform.isIOS()) {
+
+    }
+  });
+  $ionicPlatform.ready(function() {
+    if (ionic.Platform.isAndroid() || ionic.Platform.isIOS()) {
+      register();
+    }
+
+  });
+
+  function storeDeviceToken(type) {
+    // Create a random userid to store with it
+    var user = { user: 'user' + Math.floor((Math.random() * 10000000) + 1), type: type, token: $scope.regId };
+    console.log("Post token for registered device with data " + JSON.stringify(user));
+
+    $http.post('http://192.168.1.16:8000/subscribe', JSON.stringify(user))
+      .success(function (data, status) {
+        console.log("Token stored, device is successfully subscribed to receive push notifications.");
+      })
+      .error(function (data, status) {
+        console.log("Error storing device token." + data + " " + status)
+      }
+    );
+  }*/
 });
 

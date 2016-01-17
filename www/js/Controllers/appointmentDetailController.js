@@ -1,4 +1,4 @@
-hospitalModule.controller('appointmentDetailController', function($scope,$ionicPopup,$state,MobileID, $ionicSideMenuDelegate,hospitalFactory, $http, Domain,$timeout) {
+hospitalModule.controller('appointmentDetailController', function($scope,$ionicBackdrop,$ionicPopup,$state,MobileID, $ionicSideMenuDelegate,hospitalFactory, $http, Domain,$timeout) {
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();
   };
@@ -12,17 +12,36 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
 
   $scope.AppointmentID = localStorage.getItem('appointID');
 
-  $http.post(Domain + "getMachineDetail",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID}).then (function(response){
+  $scope.doRefresh = function() {
+    //Socket connection
+    var socket = io.connect(Domain);
+    socket.on('connect', function(){
 
-    if(response){
-      console.log(response);
-      $scope.drdetail = response.data.content;
-      $scope.drdetail.WaitingPersons = $scope.drdetail.WaitingPersons.length-1;
-    }
+      console.log('Connected to socket');
 
-  },function(error){
-    console.log(error);
-  });
+    });
+
+    $ionicBackdrop.retain();
+
+    $http.post(Domain + "getMachineDetail",{ClinicID:$scope.ClinicID , DoctorID:$scope.DoctorID}).then (function(response){
+
+      if(response){
+        console.log(response);
+        $scope.drdetail = response.data.content;
+        $scope.drdetail.WaitingPersons = $scope.drdetail.WaitingPersons.length-1;
+        $ionicBackdrop.release();
+      }
+
+    },function(error){
+      console.log(error);
+      $ionicBackdrop.release();
+    });
+    //This is the same API we are calling.
+    $scope.$broadcast('scroll.refreshComplete'); //This line stops the refresh loader
+  };
+
+  $scope.doRefresh();
+
 
   //Socket connection
   var socket = io.connect(Domain);
@@ -212,8 +231,6 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicP
         console.log('error');
       });
     }
-
-
   }
 
 });
