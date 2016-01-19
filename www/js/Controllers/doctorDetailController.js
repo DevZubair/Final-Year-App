@@ -57,13 +57,18 @@ hospitalModule.controller('doctorDetailController', function($scope,$ionicPopup,
     $ionicBackdrop.retain();
     $http.post(Domain + "getMachineDetail",{ClinicID:$scope.ClinicID, DoctorID:$scope.DoctorID}).then (function(response){
 
-      if(response){
+      if(response.data.code == 200){
         console.log(response);
 
         $scope.drdetail = response.data.content;
         $scope.drdetail.WaitingPersons = $scope.drdetail.WaitingPersons.length;
 
-        $ionicBackdrop.release();}
+        $ionicBackdrop.release();
+      }
+      else{
+        console.log(response);
+        $ionicBackdrop.release();
+      }
 
     },function(error){
       console.log(error);

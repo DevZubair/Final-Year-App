@@ -54,4 +54,13 @@ hospitalModule.controller('clinicsListController', function($scope,$ionicBackdro
         hospitalFactory.getterName(clinic);
         $state.go('doctorsList');
     };
+
+  var a = "Test123TEST";
+  var b = a.replace(/[^a-z0-9]/gi,'');
+  if(a === b){
+    console.log('Success validation');
+  }else{
+    console.log('Error validation');
+  }
+
 });

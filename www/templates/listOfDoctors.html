@@ -52,7 +52,7 @@
             <div class=" col col-10 numberCircle">
                 <p class="margin-top-2">{{$index+1}}</p>
             </div>
-            <div class="col col-50 doctor-card-heading">
+            <div class="col col-50 doctor-card-heading" style="max-width: 40% !important;">
                 <div class="theme-font-grey-color font-size-15 ">{{contents.Speciality}}</div>
                 <div class="theme-font-grey-color font-size-15 ">{{contents.Timings}}</div>
 
@@ -63,8 +63,8 @@
                 </i>
             </div>
 
-            <div class="col col-20 padding-top-12">
-                <p class="theme-font-grey-color font-size-14">{{contents.DoctorFirstName}}</p>
+            <div class="col col-33 padding-top-12">
+                <p class="theme-font-grey-color font-size-14">Dr. {{contents.DoctorFirstName}}</p>
                 <p class="theme-font-green-color doctor-name-status" ng-if="contents.Status">Available</p>
                 <p class="theme-font-disable-color doctor-name-status" ng-if="!contents.Status">Not Available</p>
             </div>
