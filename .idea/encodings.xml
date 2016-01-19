@@ -3,7 +3,9 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/www/css/listOfDoctors.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/Controllers/clinicsListController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/Controllers/contactPageController.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/Controllers/doctorDetailController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/contactPage.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/listOfDoctors.html" charset="UTF-8" />
   </component>
 </project>

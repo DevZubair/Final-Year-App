@@ -34,11 +34,11 @@
                     <div class="list">
                         <label class="item item-input border-top-none border-LR-none">
                             <span class="input-label placeholder-grey-color font-color-grey font-size-14">First Name</span>
-                            <input class="textFont" type="text" ng-model="$parent.PatientFirstName">
+                            <input class="textFont" placeholder="Letters/Numbers only" type="text" ng-model="$parent.PatientFirstName">
                         </label>
                         <label class="item item-input border-LR-none">
                             <span class="input-label placeholder-grey-color font-color-grey font-size-14">Last Name</span>
-                            <input class="textFont" type="text" ng-model="$parent.PatientLastName">
+                            <input class="textFont" placeholder="Letters/Numbers only" type="text" ng-model="$parent.PatientLastName">
                         </label>
 
                         <label class="item item-input border-LR-none border-bottom-none">
@@ -50,13 +50,14 @@
                         </label>
                         <label class="item item-input border-LR-none border-bottom-none">
                             <span class="input-label placeholder-grey-color font-color-grey font-size-14">Age</span>
-                            <input class="textFont" type="number" ng-model="$parent.PatientAge">
+                            <input class="textFont" placeholder="Numbers only (1-130)" type="number" ng-model="$parent.PatientAge">
                         </label>
                     </div>
                 </div>
             </div>
         </div>
-        <p class="Invalid-color" ng-if="emptyField"> Invalid Information!</p>
+        <p class="Invalid-color" ng-if="emptyField"> *Please fill all fields!</p>
+        <p class="Invalid-color" ng-if="errorField"> *Please fill only correct values!</p>
 
         <div class="row" ng-click="appoint()" >
             <div class="col text-center ok-image-width">
