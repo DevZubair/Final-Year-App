@@ -2,12 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b12b0640-c33d-41cb-84f5-0b3026d53c40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/images/layers-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/images/layers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/leaf-red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/images/marker-icon-2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/images/marker-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/marker-shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/images/marker-shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/origin-marker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/.cz.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/Jakefile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/PLUGIN-GUIDE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/js/lib/_ink.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/js/lib/_motion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/aliases.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/dist/angular-leaflet-directive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/dist/angular-leaflet-directive.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/dist/angular-leaflet-directive.no-header.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/bar-header-expanded.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/bar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/motion/blinds.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/button-bar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/button-fab.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/button-floating.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/button.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/card.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/clean.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/coffeelint.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/helpers/colors.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/concat.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/connect.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/generate-examples.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/hero.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/index.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/overrides/ink.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/js/ionic-material.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/dist/ionic.material.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/dist/ionic.material.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/dist/ionic.material.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/dist/ionic.material.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/dist/ionic.material.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/overrides/ionic.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/item.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/jscs.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/jshint.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/karma.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/leaflet-src.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/leaflet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/dist/leaflet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/loading.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/login.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/js/map.service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/mask.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/directives/md-label.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/menu.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/elements/motion-elements.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/ngAnnotate.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/open.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/leaflet/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/motion/pan-in-left.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/protractor.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/motion/ripple.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/shell.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/helpers/sizes.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/motion/slide-fade-in.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/motion/slide-in-right.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/motion/slide-up.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/uglify.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/src/scss/helpers/utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/angular-leaflet-directive/grunt/watch.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/lib/ionic-material/webpack.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/appointmentsList.html" afterPath="$PROJECT_DIR$/www/templates/appointmentsList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/contactPage.html" afterPath="$PROJECT_DIR$/www/templates/contactPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/Controllers/appointmentDetailController.js" afterPath="$PROJECT_DIR$/www/js/Controllers/appointmentDetailController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/Controllers/appointmentsListController.js" afterPath="$PROJECT_DIR$/www/js/Controllers/appointmentsListController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/Controllers/clinicsListController.js" afterPath="$PROJECT_DIR$/www/js/Controllers/clinicsListController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic.project" afterPath="$PROJECT_DIR$/ionic.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" afterPath="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/listOfClinics.css" afterPath="$PROJECT_DIR$/www/css/listOfClinics.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/listOfClinics.html" afterPath="$PROJECT_DIR$/www/templates/listOfClinics.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fyp-mobile.iws" />
@@ -29,21 +121,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contactPageController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/Controllers/contactPageController.js">
+      <file leaf-file-name="clinicsListController.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/js/Controllers/clinicsListController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.62157536">
+              <caret line="198" column="32" selection-start-line="198" selection-start-column="32" selection-end-line="198" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contactPage.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/templates/contactPage.html">
+      <file leaf-file-name="map.service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/map.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9439776">
-              <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listOfClinics.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/css/listOfClinics.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listOfClinics.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/templates/listOfClinics.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.615385">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="48.5">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#div#0;n#div#1;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#div#0;n#div#2;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#div#0;n#div#3;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -62,11 +203,22 @@
         <option value="$PROJECT_DIR$/www/js/Controllers/doctorDetailController.js" />
         <option value="$PROJECT_DIR$/www/templates/listOfDoctors.html" />
         <option value="$PROJECT_DIR$/www/css/listOfDoctors.css" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/js/Controllers/clinicsListController.js" />
         <option value="$PROJECT_DIR$/www/js/Controllers/contactPageController.js" />
-        <option value="$PROJECT_DIR$/www/templates/appointmentsList.html" />
         <option value="$PROJECT_DIR$/www/templates/contactPage.html" />
+        <option value="$PROJECT_DIR$/www/js/Controllers/appointmentDetailController.js" />
+        <option value="$PROJECT_DIR$/www/js/services.js" />
+        <option value="$PROJECT_DIR$/www/js/Controllers/appointmentsListController.js" />
+        <option value="$PROJECT_DIR$/www/templates/appointmentsList.html" />
+        <option value="$PROJECT_DIR$/www/lib/angular-leaflet-directive/dist/angular-leaflet-directive.js" />
+        <option value="$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/css/listOfClinics.css" />
+        <option value="$PROJECT_DIR$/www/templates/listOfClinics.html" />
+        <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/plugins/fetch.json" />
+        <option value="$PROJECT_DIR$/plugins/android.json" />
+        <option value="$PROJECT_DIR$/www/js/map.service.js" />
+        <option value="$PROJECT_DIR$/www/js/Controllers/clinicsListController.js" />
       </list>
     </option>
   </component>
@@ -112,7 +264,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -159,58 +310,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fyp-mobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fyp-mobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fyp-mobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fyp-mobile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server" />
+    <property name="last_opened_file_path" value="D:/Projects/myMapDemo" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
@@ -218,12 +330,52 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FYP\Project\fyp-mobile\www\js" />
+      <recent name="D:\FYP\Project\fyp-mobile\www\lib" />
+      <recent name="D:\FYP\Project\fyp-mobile\www\img" />
       <recent name="D:\FYP\Project\fyp-mobile\resources" />
       <recent name="D:\FYP\Project\fyp-mobile\platforms\android\res" />
-      <recent name="D:\FYP\Project\fyp-mobile\platforms\android\res\drawable-xxxhdpi" />
-      <recent name="D:\FYP\Project\fyp-mobile\platforms\android\res\drawable-xxhdpi" />
-      <recent name="D:\FYP\Project\fyp-mobile\platforms\android\res\drawable-xhdpi" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -240,26 +392,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26960784" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -286,8 +438,21 @@
     <entry file="file://$PROJECT_DIR$/www/js/Controllers/contactPageController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/contactPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Controllers/contactPageController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -295,7 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -430,13 +594,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/css/listOfDoctors.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7101828">
@@ -456,20 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Controllers/clinicsListController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5561358">
-          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/listOfDoctors.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0952381">
@@ -484,41 +627,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Controllers/appointmentDetailController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7519581">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/Controllers/appointmentsListController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.64041096">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/appointmentsList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1218638">
-          <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/Controllers/contactPageController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Controllers/appointmentDetailController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0753424">
+          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/contactPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9439776">
-          <caret line="66" column="14" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.63506263">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/ionic-material/src/js/lib/_ink.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Controllers/appointmentsListController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="180" column="1" selection-start-line="180" selection-start-column="1" selection-end-line="180" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/appointmentsList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5430108">
+          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/angular-leaflet-directive/dist/angular-leaflet-directive.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/ionic/js/ionic.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8319088">
+          <caret line="21159" column="0" selection-start-line="21159" selection-start-column="0" selection-end-line="21159" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1746576">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/lib/angular-leaflet-directive/dist/angular-leaflet-directive.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.058219">
+          <caret line="2410" column="5" selection-start-line="2410" selection-start-column="5" selection-end-line="2410" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.26198632">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9023973">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/fetch.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78673834">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/android.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7258065">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/listOfClinics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.615385">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="48.5">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#1;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#2;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#0;n#div#3;n#ion-side-menu#0;n#ion-side-menus#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/listOfClinics.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/map.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/Controllers/clinicsListController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62157536">
+          <caret line="198" column="32" selection-start-line="198" selection-start-column="32" selection-end-line="198" selection-end-column="32" />
           <folding />
         </state>
       </provider>

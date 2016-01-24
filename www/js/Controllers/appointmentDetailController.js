@@ -96,6 +96,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicB
     });
 
     myPopup.then(function(res) {
+      myPopup.close();
       console.log('Tapped!', res);
     });
   };

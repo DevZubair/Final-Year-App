@@ -11,38 +11,36 @@
   </ion-nav-buttons>
   <ion-header-bar class="bar-light bar-subheader">
     <div class="row">
-        <div class=" col col-10 ion-refresh icon-refresh-size" ng-click="refreshAll()">
-        </div>
-        <div class="col col-50">
-            <div class="searching-bar-adjustment">
-                <label class="item-input-wrapper search-background-color">
-                    <i class="icon ion-ios-search placeholder-icon"></i>
-                    <input type="search" placeholder="Search" ng-model="cross"/>
-                </label></div>
-        </div>
+      <div class=" col col-10 ion-refresh icon-refresh-size" ng-click="refreshAll()">
+      </div>
+      <div class="col col-50">
+        <div class="searching-bar-adjustment">
+          <label class="item-input-wrapper search-background-color">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search" ng-model="cross"/>
+          </label></div>
+      </div>
 
-        <div  ng-show="cross" class="col col-40 padding-top-19" ng-click="clearSearch()">
-            <i class="ion-close-circled ion-size-x"> </i>
-        </div>
+      <div  ng-show="cross" class="col col-40 padding-top-19" ng-click="clearSearch()">
+        <i class="ion-close-circled ion-size-x"> </i>
+      </div>
     </div>
-      <div class="row margin-top-14p">
-          <div class="col"></div>
-          <div class="col">
-          <i ng-show="validation" class="ion-android-sad icon-sad"></i> </div>
-          <div class="col"></div>
-          </div>
+    <div class="row margin-top-14p">
+      <div class="col"></div>
+      <div class="col">
+        <i ng-show="validation" class="ion-android-sad icon-sad"></i> </div>
+      <div class="col"></div>
+    </div>
 
-      <div  class="margin-left-38p">
-          <p ng-show="validation"> Currently, Clinic Is Not Registered! </p>
-
-          </div>
-
-
+    <div  class="margin-left-38p">
+      <p ng-show="validation"> Currently, Clinic Is Not Registered! </p>
 
     </div>
+
   </ion-header-bar>
+
   <ion-content class="content-margin-top">
-    <div class="row" ng-if="showSpinner">
+   <!-- <div class="row" ng-if="showSpinner">
       <div class="col"></div>
       <div class="col" style="margin-left: 15%">
         <ion-spinner icon="ripple"></ion-spinner>
@@ -51,13 +49,23 @@
     </div>
     <div class="list  margin-top-10">
       <div class="item item-avatar margin-top-10" ng-click="changeState(list)" ng-repeat="list in allClinics | filter:cross" >
-      <img src="img\logo.png">
-          <h2>{{list.Name}}</h2>
+        <img src="img\logo.png">
+        <h2>{{list.Name}}</h2>
         <p>{{list.Location}}</p>
 
       </div>
 
     </div>
+-->
+   <!-- <div id="map">
+    </div>
+    <leaflet
+      width="100%"
+      markers="markers"
+      lf-center="center"
 
+     >
+    </leaflet>-->
+    <div id="map" data-tap-disabled="true"></div>
   </ion-content>
 </ion-view>
