@@ -54,3 +54,6 @@ ion-content .angular-leaflet-map{
 .scroll {
   height: 100%;
 }
+#InfoWindowDetail{
+  color:red;
+}

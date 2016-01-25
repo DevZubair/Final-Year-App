@@ -7,6 +7,7 @@ hospitalModule.controller('clinicsListController',
            $state,
            $ionicSideMenuDelegate,
            $ionicLoading, $compile,
+           $ionicModal,
            $http,
            hospitalFactory,
            Domain) {
@@ -146,7 +147,7 @@ hospitalModule.controller('clinicsListController',
         content: 'Getting current location...',
         showBackdrop: true
       });
-    //  $scope.loading.hide();
+      //  $scope.loading.hide();
       navigator.geolocation.getCurrentPosition(function (pos) {
         //  $scope.map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
         var myLatlng = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
@@ -190,14 +191,43 @@ hospitalModule.controller('clinicsListController',
             title: info.name,
             icon: orange_leaf_icon
           });
-          marker.content = '<div class="infoWindowContent">' + info.name + '</div>';
+
+          var content = document.createElement('div'),
+            button;
+          content.innerHTML = info.name + '<br/>';
+          button = content.appendChild(document.createElement('p'));
+          button.type = 'text';
+          button.id='InfoWindowDetail';
+          button.innerHTML = 'Clinic Details';
+
           google.maps.event.addListener(marker, 'click', function () {
-            infowindow.setContent(marker.title);
-            infowindow.open($scope.map, marker);
+
+            infowindow.setOptions({
+              content: content,
+              map: $scope.map,
+              position: this.position
+            });
+
           });
           $scope.markers.push(marker);
           $scope.loading.hide();
+          google.maps.event.addDomListener(button, 'click', function () {
+            //Open modal here for clinic details
+            console.log(loc.lat + ' And ' + loc.lng);
+            var clinicDetails = {
+              clinicName : info.name,
+              lat : loc.lat,
+              long : loc.lng,
+              originLat : pos.coords.latitude,
+              originLong : pos.coords.longitude
+            };
+            $scope.showModal(clinicDetails);
+          });
         };
+
+        google.maps.event.addListener(map, 'click', function() {
+          infowindow.close();
+        });
 
         mapService.getMarkers(
           new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude), $scope.map , ['hospital'],
@@ -218,5 +248,33 @@ hospitalModule.controller('clinicsListController',
 
     }
     initialize();
+
+    $ionicModal.fromTemplateUrl('clinic-detailModal.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+    $scope.showModal = function (detail) {
+      $scope.GeoClinicName = detail.clinicName;
+      $scope.key = 'AIzaSyB3scfOYTKcIvsHf43xzdQZOw0_2mbmF3M';
+      $scope.googleAPI = 'https://maps.googleapis.com/maps/api/distancematrix/json?destinations=' + detail.lat +',' + detail.long +'&origins=' + detail.originLat + ',' + detail.originLong +'&mode=driving&language=en-EN&key=' + $scope.key;
+      $http.get($scope.googleAPI).then(function(response) {
+        if (response.status == 200) {
+          console.log(response);
+          $scope.directionMatrix = response.data;
+          $scope.modal.show();
+        }
+        else{
+          console.log('Error in google map direction matrix API call');
+        }
+      }, function (err) {
+        console.log(err);
+      });
+
+    };
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
   });
 
