@@ -276,5 +276,11 @@ hospitalModule.controller('clinicsListController',
     $scope.$on('$destroy', function() {
       $scope.modal.remove();
     });
+
+    $scope.goToDoctor = function () {
+      $scope.modal.remove();
+    localStorage.setItem('ClinicID','5642f2d76baf37701ce27427');   //For now we have done hard-coded ID, later we will go for google map
+      $state.go('doctorsList');
+    };
   });
 

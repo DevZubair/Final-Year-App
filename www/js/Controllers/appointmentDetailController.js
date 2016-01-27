@@ -28,7 +28,7 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicB
       if(response){
         console.log(response);
         $scope.drdetail = response.data.content;
-        $scope.drdetail.WaitingPersons = $scope.drdetail.WaitingPersons.length-1;
+        $scope.drdetail.WaitingPersons = $scope.drdetail.WaitingPersons.length;
         $ionicBackdrop.release();
       }
 
@@ -54,18 +54,10 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicB
   socket.on('device_active', function (data) {
     console.log('updated');
     $scope.drdetail.CurrentNumber = data.nowServing;
-    $scope.drdetail.WaitingPersons = data.inWaiting-1;
+    $scope.drdetail.WaitingPersons = data.inWaiting;
     $scope.$apply($scope.drdetail);
     if($scope.drdetail.CurrentNumber == localStorage.getItem('appointNumber')){
       $scope.showPopup();
-    }
-  });
-
-  socket.on('appointmentAdded', function (data) {
-    console.log(data);
-    if(data.DoctorID ==  $scope.DoctorID && $scope.drdetail!= undefined){
-      $scope.drdetail.WaitingPersons =  $scope.drdetail.WaitingPersons + 1;
-      $scope.$apply($scope.drdetail);
     }
   });
 
@@ -82,13 +74,14 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicB
       buttons: [
         { text: 'Leave',
           onTap: function(e) {
+            myPopup.close();
             $state.go('appointmentsList');
           }},
         {
           text: '<b>Rate</b>',
           type: 'button-positive',
           onTap: function(e) {
-
+            myPopup.close();
             $state.go('thanksPage');
           }
         }

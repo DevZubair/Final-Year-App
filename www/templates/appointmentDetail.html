@@ -33,8 +33,8 @@
       <div class="col col-50">
         <p class="waiting-alignment font-styling"> In Waiting </p>
         <div class="ion-ios-people icon-waiting-size"></div>
-        <p class="numbers_alignment" ng-if="drdetail.WaitingPersons > 0">{{drdetail.WaitingPersons}}</p>
-        <p class="numbers_alignment" ng-if="drdetail.WaitingPersons <= 0">0</p>
+        <p class="numbers_alignment" ng-if="myNumber - drdetail.CurrentNumber - 1 > 0">{{myNumber - drdetail.CurrentNumber - 1}}</p>
+        <p class="numbers_alignment" ng-if="myNumber - drdetail.CurrentNumber - 1 <= 0">0</p>
       </div>
     </div>
     <div class="card" style="background-image: url(img/image_blur.jpg); background-repeat: no-repeat">

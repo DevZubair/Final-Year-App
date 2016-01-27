@@ -3,6 +3,8 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicBackdro
     $ionicSideMenuDelegate.toggleLeft();
   };
 
+  $scope.showSpinner = true;
+  $scope.ID = localStorage.getItem('ClinicID');
   $scope.cross='';
   $scope.validation=false;
   $scope.clearSearch= function () {
@@ -33,8 +35,6 @@ hospitalModule.controller('doctorsListController', function($scope,$ionicBackdro
     });
   };
 
-  $scope.showSpinner = true;
-  $scope.ID = localStorage.getItem('ClinicID');
 
   $http.post(Domain + "getClinicDoctors",{ClinicID:$scope.ID}).then (function(response){
 
