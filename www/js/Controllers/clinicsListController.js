@@ -69,67 +69,6 @@ hospitalModule.controller('clinicsListController',
      };
      */
 
-    /* var my_location,
-     orange_leaf_icon = {
-     iconUrl: 'img/leaf-red.png',
-     shadowUrl: 'img/marker-shadow.png',
-     iconSize:     [26, 45]
-
-     },
-     origin_icon = {
-     iconUrl: 'img/origin-marker.png',
-     shadowUrl: 'img/marker-shadow.png',
-     iconSize:     [35, 45]
-
-     };
-
-     angular.extend($scope, {
-     center: {
-     lat: 10,
-     lng: 0,
-     zoom: 5
-     },
-     markers: {}
-     });
-
-     mapService.getLocation(function(location) {
-
-     $scope.center = {
-     lat: location.lat,
-     lng: location.long,
-     zoom: 15
-     };
-
-     $scope.$digest($scope.center);
-     mapService.getMarkers(
-     new google.maps.LatLng(location.lat, location.long),document.getElementById('map'), ['hospital'],
-     function(results) {
-     results.forEach(function(marker) {
-
-     var __location = marker.geometry.location.toJSON();
-
-     $scope.markers[marker.id] = {
-     lat: __location.lat,
-     lng: __location.lng,
-     message: marker.name,
-     focus: false,
-     icon: orange_leaf_icon
-     };
-
-     });
-     $scope.markers['OriginID'] = {
-     lat: location.lat,
-     lng: location.long,
-     message: "You are here",
-     focus: true,
-     icon: origin_icon
-     };
-     $scope.$apply($scope.markers)
-     }
-     )
-
-     });*/
-
     var orange_leaf_icon = {
         url: 'img/leaf-red.png',
         scaledSize: new google.maps.Size(30, 45)

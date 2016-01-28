@@ -5,6 +5,7 @@
     <file url="file://D:/Elance/CalDay/cal-day-client/calDay/www/css/style.css" charset="UTF-8" />
     <file url="file://D:/Elance/CalDay/cal-day-client/calDay/www/lib/flex-calendar/dist/flex-calendar.js" charset="UTF-8" />
     <file url="file://D:/Elance/CalDay/cal-day-client/calDay/www/templates/userItem.html" charset="UTF-8" />
+    <file url="file://D:/Elance/Fiz-x/Project/fiz-x/package.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionic.project" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plugins/android.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plugins/fetch.json" charset="UTF-8" />
@@ -18,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/www/js/Controllers/doctorDetailController.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/Controllers/doctorsListController.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/ionic-rating.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/js/map.service.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/appointmentDetail.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/appointmentsList.html" charset="UTF-8" />
