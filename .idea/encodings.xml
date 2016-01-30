@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://D:/Elance/CalDay/cal-day-client/calDay/www/css/common.css" charset="UTF-8" />
-    <file url="file://D:/Elance/CalDay/cal-day-client/calDay/www/css/style.css" charset="UTF-8" />
-    <file url="file://D:/Elance/CalDay/cal-day-client/calDay/www/lib/flex-calendar/dist/flex-calendar.js" charset="UTF-8" />
-    <file url="file://D:/Elance/CalDay/cal-day-client/calDay/www/templates/userItem.html" charset="UTF-8" />
     <file url="file://D:/Elance/Fiz-x/Project/fiz-x/package.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionic.project" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/plugins/android.json" charset="UTF-8" />
@@ -26,6 +22,7 @@
     <file url="file://$PROJECT_DIR$/www/templates/contactPage.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/listOfClinics.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/www/templates/listOfDoctors.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../queno-admin.git/app/ErrorPage.html" charset="UTF-8" />
     <file url="file://D:/Projects/ionic-maps/www/src/components/map/map.controller.js" charset="UTF-8" />
   </component>
 </project>

@@ -99,9 +99,23 @@
         <p>Distance : {{directionMatrix.rows[0].elements[0].distance.text}}</p>
         <p>Duration : {{directionMatrix.rows[0].elements[0].duration.text}}</p>
       </div>
-      <div class="row" ng-click="goToDoctor()">
+
+      <div class="row" ng-click="goToDoctor()" ng-if="clinicExist">
         <button class="button button-block color-submit">Take Appointment</button>
       </div>
+
+      <div class="row margin-top-14p" ng-if="!clinicExist">
+        <div class="col"></div>
+        <div class="col">
+          <i class="ion-android-sad" style=" color: #c92420;font-size: 80px"></i> </div>
+        <div class="col"></div>
+      </div>
+
+      <div class="margin-left-38p" ng-if="!clinicExist">
+        <p> Currently, Clinic Is Not Registered! </p>
+
+      </div>
+
     </ion-content>
   </ion-modal-view>
 </script>

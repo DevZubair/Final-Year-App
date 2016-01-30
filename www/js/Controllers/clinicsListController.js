@@ -79,6 +79,7 @@ hospitalModule.controller('clinicsListController',
         scaledSize: new google.maps.Size(40, 45)
 
       };
+    $scope.clinicExist = false;
 
     function initialize() {
       //  var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
@@ -200,9 +201,22 @@ hospitalModule.controller('clinicsListController',
       $scope.googleAPI = 'https://maps.googleapis.com/maps/api/distancematrix/json?destinations=' + detail.lat +',' + detail.long +'&origins=' + detail.originLat + ',' + detail.originLong +'&mode=driving&language=en-EN&key=' + $scope.key;
       $http.get($scope.googleAPI).then(function(response) {
         if (response.status == 200) {
-          console.log(response);
           $scope.directionMatrix = response.data;
-          $scope.modal.show();
+          $http.post(Domain + 'findClinic',{ClinicName : detail.clinicName}).then(function(res) {
+            $scope.modal.show();
+            if (res.data.code == 200) {
+              console.log(res);
+              $scope.clinicExist = true;
+              localStorage.setItem('ClinicID',res.data.content[0]._id);
+            }
+            else{
+              $scope.clinicExist = false;
+              console.log('Clinic not found');
+            }
+          }, function (err) {
+            $scope.clinicExist = false;
+            console.log(err);
+          });
         }
         else{
           console.log('Error in google map direction matrix API call');
@@ -218,7 +232,6 @@ hospitalModule.controller('clinicsListController',
 
     $scope.goToDoctor = function () {
       $scope.modal.remove();
-    localStorage.setItem('ClinicID','5642f2d76baf37701ce27427');   //For now we have done hard-coded ID, later we will go for google map
       $state.go('doctorsList');
     };
   });
