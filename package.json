@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "myApp: An Ionic project",
   "dependencies": {
+    "angular": "^1.4.8",
     "gulp": "^3.5.6",
-    "gulp-sass": "^1.3.3",
     "gulp-concat": "^2.2.0",
     "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.3"
   },
   "devDependencies": {
+    "angular-mocks": "^1.4.8",
     "bower": "^1.3.3",
     "gulp-util": "^2.2.14",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-cli": "^0.1.2",
+    "karma-jasmine": "^0.3.6",
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
@@ -23,5 +30,19 @@
   ],
   "cordovaPlatforms": [
     "android"
-  ]
+  ],
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevZubair/Final-Year-App.git"
+  },
+  "author": "Farida Kanwal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevZubair/Final-Year-App/issues"
+  },
+  "homepage": "https://github.com/DevZubair/Final-Year-App"
 }
