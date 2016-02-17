@@ -93,7 +93,7 @@ var hospitalModule = angular.module('hospitalModule', ['ionic','ionic.rating','l
 
     .constant({
         Domain : 'http://fyp-server.herokuapp.com/',
-        MobileID : 'B57635472H656HJGJHGJHG'
+        MobileID : 'SSDSDS32323'
     });
 
 

@@ -189,13 +189,15 @@ hospitalModule.controller('clinicsListController',
     }
     initialize();
 
-    $ionicModal.fromTemplateUrl('clinic-detailModal.html', {
-      scope: $scope,
-      animation: 'slide-in-up'
-    }).then(function(modal) {
-      $scope.modal = modal;
-    });
     $scope.showModal = function (detail) {
+
+      $ionicModal.fromTemplateUrl('clinic-detailModal.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function(modal) {
+        $scope.modal = modal;
+      });
+
       $scope.GeoClinicName = detail.clinicName;
       $scope.key = 'AIzaSyB3scfOYTKcIvsHf43xzdQZOw0_2mbmF3M';
       $scope.googleAPI = 'https://maps.googleapis.com/maps/api/distancematrix/json?destinations=' + detail.lat +',' + detail.long +'&origins=' + detail.originLat + ',' + detail.originLong +'&mode=driving&language=en-EN&key=' + $scope.key;
@@ -208,6 +210,7 @@ hospitalModule.controller('clinicsListController',
               console.log(res);
               $scope.clinicExist = true;
               localStorage.setItem('ClinicID',res.data.content[0]._id);
+              localStorage.setItem('ClinicName',$scope.GeoClinicName);
             }
             else{
               $scope.clinicExist = false;

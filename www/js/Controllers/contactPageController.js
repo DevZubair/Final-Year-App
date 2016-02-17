@@ -24,8 +24,8 @@ hospitalModule.controller('contactPageController', function($scope,$ionicPlatfor
   $scope.doctorName = localStorage.getItem('Doctor');
   var doctor = JSON.parse($scope.doctorName);
 
-  $scope.clinicName = localStorage.getItem('Clinic');
-  var clinic = JSON.parse($scope.clinicName);
+  $scope.clinicName = localStorage.getItem('ClinicName');
+ // var clinic = JSON.parse($scope.clinicName);
   $scope.appoint=function() {
 
     $ionicBackdrop.retain();
@@ -55,7 +55,7 @@ hospitalModule.controller('contactPageController', function($scope,$ionicPlatfor
             PatientAge: $scope.PatientAge,
             Gender: $scope.PatientGender,
             DoctorName: doctor.DoctorFirstName + ' ' + doctor.DoctorLastName,
-            ClinicName: clinic.Name
+            ClinicName: $scope.clinicName
 
           }).then(function (response) {
 
@@ -72,7 +72,7 @@ hospitalModule.controller('contactPageController', function($scope,$ionicPlatfor
                   PatientAge: $scope.PatientAge,
                   Gender: $scope.PatientGender,
                   DoctorName: doctor.DoctorFirstName + ' ' + doctor.DoctorLastName,
-                  ClinicName: clinic.Name,
+                  ClinicName: $scope.clinicName,
                   Maker: 'Mobile',
                   AppointmentNumber : response.data.AppointmentNumber
                 });
