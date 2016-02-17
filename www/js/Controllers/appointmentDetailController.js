@@ -7,8 +7,8 @@ hospitalModule.controller('appointmentDetailController', function($scope,$ionicB
   $scope.myNumber = localStorage.getItem('appointNumber');
   var doctor = localStorage.getItem('Doctor');
   $scope.doctorName = JSON.parse(doctor);
-  var clinic = localStorage.getItem('Clinic');
-  $scope.clinicName = JSON.parse(clinic);
+  //var clinic = localStorage.getItem('Clinic');
+  $scope.clinicName = localStorage.getItem('ClinicName');
 
   $scope.AppointmentID = localStorage.getItem('appointID');
 
