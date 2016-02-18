@@ -178,5 +178,6 @@ hospitalModule.controller('appointmentsListController', function($scope,MobileID
       console.log(error);
     });
   };
+
 });
 
