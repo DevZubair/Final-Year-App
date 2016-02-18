@@ -1,4 +1,4 @@
-hospitalModule.controller('contactPageController', function($scope,$ionicPlatform,$cordovaPush,MobileID,$ionicPopup,$state,$ionicBackdrop,$ionicSideMenuDelegate,hospitalFactory, $http, Domain ) {
+hospitalModule.controller('contactPageController', function($scope,$ionicPlatform,MobileID,$ionicPopup,$state,$ionicBackdrop,$ionicSideMenuDelegate,hospitalFactory, $http, Domain ) {
 
   $scope.toggleLeft = function () {
     $ionicSideMenuDelegate.toggleLeft();

@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in doctorDetailController.js
-var hospitalModule = angular.module('hospitalModule', ['ionic','ionic.rating','ngCordova'])
+var hospitalModule = angular.module('hospitalModule', ['ionic','ionic.rating'])
 
   .run(function($ionicPlatform,$ionicPopup) {
     $ionicPlatform.ready(function() {
