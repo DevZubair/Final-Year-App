@@ -81,7 +81,7 @@ hospitalModule.controller('clinicsListController',
       };
     $scope.clinicExist = false;
 
-    function initialize() {
+    $scope.initialize = function() {
       //  var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
       $scope.loading = $ionicLoading.show({
         content: 'Getting current location...',
@@ -186,10 +186,12 @@ hospitalModule.controller('clinicsListController',
         $scope.loading.hide();
       });
 
-    }
-    initialize();
+    };
+    $scope.initialize();
 
     $scope.showModal = function (detail) {
+
+      $ionicBackdrop.retain();
 
       $ionicModal.fromTemplateUrl('clinic-detailModal.html', {
         scope: $scope,
@@ -203,8 +205,10 @@ hospitalModule.controller('clinicsListController',
       $scope.googleAPI = 'https://maps.googleapis.com/maps/api/distancematrix/json?destinations=' + detail.lat +',' + detail.long +'&origins=' + detail.originLat + ',' + detail.originLong +'&mode=driving&language=en-EN&key=' + $scope.key;
       $http.get($scope.googleAPI).then(function(response) {
         if (response.status == 200) {
+
           $scope.directionMatrix = response.data;
           $http.post(Domain + 'findClinic',{ClinicName : detail.clinicName}).then(function(res) {
+            $ionicBackdrop.release();
             $scope.modal.show();
             if (res.data.code == 200) {
               console.log(res);
@@ -222,9 +226,11 @@ hospitalModule.controller('clinicsListController',
           });
         }
         else{
+          $ionicBackdrop.release();
           console.log('Error in google map direction matrix API call');
         }
       }, function (err) {
+        $ionicBackdrop.release();
         console.log(err);
       });
 
