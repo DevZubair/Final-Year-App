@@ -1,0 +1,34 @@
+.home-icon-circle {
+    font-size: 105px;
+    color: #c92420;
+}
+.home-icon-circle-2{
+    font-size: 105px;
+    color: #656565;
+}
+.icon-home-location
+{
+    margin-left: 26px;
+    position: absolute;
+    margin-top: 24px;
+    font-size: 57px;
+    color: #c92420;
+
+}
+.icon-home-pulse
+{
+    margin-left: 17px;
+    position: absolute;
+    margin-top: 24px;
+    font-size: 57px;
+    color: #656565;
+}
+.home-icon-margin-top
+{
+margin-top: 30px;
+}
+.font-home-hosp
+{
+    font-size: 14px;
+    font-weight: 100;
+}

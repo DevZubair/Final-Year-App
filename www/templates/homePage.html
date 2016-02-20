@@ -1,0 +1,30 @@
+<ion-view view-title="HOME" hide-nav-bar='false'>
+    <ion-nav-buttons side="left">
+        <div class="margin-left-5px">
+            <i class="icon ion-navicon bar-dash-menu" ng-click="toggleLeft()"></i>
+        </div>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <div class="margin-top-4px">
+            <img src="img/nav-bar-logo.png" class="width-29px">
+        </div>
+    </ion-nav-buttons>
+    <ion-content class="content-margin-top">
+        <div class="row home-icon-margin-top" ui-sref="allDoctors">
+            <div class="col col-offset-34">
+                <i class="icon-home-pulse ion-ios-pulse-strong"> </i>
+                <i class=" home-icon-circle ion-ios-circle-outline "></i>
+
+          <p class="font-home-hosp">Search by Doctor</p>
+            </div>
+        </div>
+
+        <div class="row home-icon-margin-top" ui-sref="clinicsList">
+            <div class="col col-offset-34">
+                <i class="icon-home-location ion-ios-location"></i>
+                <i class=" home-icon-circle-2 ion-ios-circle-outline "></i>
+                <p class="font-home-hosp">Search by Hospital</p></div></div>
+        </div>
+
+    </ion-content>
+</ion-view>
