@@ -10,7 +10,7 @@
     </div>
   </ion-nav-buttons>
   <ion-header-bar class="bar-light bar-subheader">
-    <div class="row">
+   <!-- <div class="row">
       <div class=" col col-10 ion-android-locate icon-refresh-size" ng-click="initialize()">
       </div>
       <div class="col col-50">
@@ -23,6 +23,13 @@
 
       <div  ng-show="cross" class="col col-40 padding-top-19" ng-click="clearSearch()">
         <i class="ion-close-circled ion-size-x"> </i>
+      </div>
+    </div>-->
+    <div class="row">
+      <div class=" col col-10 ion-android-locate icon-refresh-size" ng-click="initialize()"></div>
+      <div class="col col-80"><input id="pac-input" ng-focus="disableTap()" class="controls" type="text" placeholder="Search Box" ng-model="cross"> </div>
+      <div ng-show="cross" class="col col-10 padding-top-19" ng-click="clearSearch()">
+        <i class="ion-close-circled ion-size-x margin-left-8-percent"> </i>
       </div>
     </div>
     <div class="row margin-top-14p">
@@ -95,7 +102,7 @@
       <div class="text-center font-size-14">
         <p>{{directionMatrix.origin_addresses[0]}}</p>
         <h4>To</h4>
-        <p>{{directionMatrix.destination_addresses[0]}}</p>
+        <p>{{GeoClinicName}}</p>  <!-- {{directionMatrix.destination_addresses[0]}}-->
         <p>Distance : {{directionMatrix.rows[0].elements[0].distance.text}}</p>
         <p>Duration : {{directionMatrix.rows[0].elements[0].duration.text}}</p>
       </div>
