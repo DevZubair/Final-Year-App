@@ -49,15 +49,46 @@
            <div class="col"></div>
          </div>
          <div class="list  margin-top-10">
-           <div class="item item-avatar margin-top-10" ng-click="changeState(list)" ng-repeat="list in allClinics | filter:cross" >
-             <img src="img\logo.png">
-             <h2>{{list.Name}}</h2>
-             <p>{{list.Location}}</p>
+           <div class="item item-avatar margin-top-10">
+                <img src="img/speciality.png" class="icon-doctor-align">
+             <h2>Lina Catherine</h2>
+             <p>Child Specialist </p>
+              <div class="row padding-0px-row">
+                  <i class=" padding-0px col col-10 ion-android-star"></i>
+                  <i class=" padding-0px col col-10 ion-android-star"></i>
+                  <i class=" padding-0px col col-10] ion-android-star"></i>
+              </div>
+               <p>DHA Clinic,Phase VI, Karachi</p>
 
            </div>
 
          </div>
 
+        <!--<div class="row viewBackground margin-top-2 div-gap-margin"  >
+            <div class=" col col-10 numberCircle">
+                <p class="margin-top-2">{{$index+1}}</p>
+            </div>
+            <div class="col col-50 doctor-card-heading" style="max-width: 40% !important;">
+                <div class="theme-font-grey-color font-size-15 ">Speciality</div>
+                <div class="theme-font-grey-color font-size-15 ">Timings</div>
+
+            </div>
+            <div class="col col-10 person-icon-img">
+                <i class=" col col-10 icon ion-record">
+                    <img src="img/speciality.png">
+                </i>
+            </div>
+
+            <div class="col col-33 padding-top-12">
+                <p class="theme-font-grey-color font-size-14">FirstName</p>
+                <p class="theme-font-green-color doctor-name-status" ng-if="contents.Status">Available</p>
+                <p class="theme-font-disable-color doctor-name-status" ng-if="!contents.Status">Not Available</p>
+            </div>
+            <div class="col padding-top-18">
+                <i class="icon ion-chevron-right float-right right-arrow-icon theme-font-grey-color font-size-16"></i>
+            </div>
+        </div>
+-->
 
     </ion-content>
 </ion-view>

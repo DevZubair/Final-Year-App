@@ -55,3 +55,16 @@
   background-color: white;
   color:#c92420;
 }
+.active-past-current-appoint{
+
+    background-color: #fafafa;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0);
+    border-bottom-color: #c92420 !important;
+    border-bottom: 5px solid;
+    border-left-color: #ffffff !important;
+    border-top-color: #ffffff !important;
+    border-right-color: #ffffff !important;
+    color: #c92420 !important;
+    font-weight: 600;
+
+}
