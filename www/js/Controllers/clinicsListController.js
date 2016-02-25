@@ -69,6 +69,9 @@ hospitalModule.controller('clinicsListController',
      };
      */
 
+    $scope.clearSearch= function () {
+      $scope.cross='';
+    };
     var orange_leaf_icon = {
         url: 'img/leaf-red.png',
         scaledSize: new google.maps.Size(30, 45)
@@ -98,6 +101,84 @@ hospitalModule.controller('clinicsListController',
         };
         var map = new google.maps.Map(document.getElementById("map"),
           mapOptions);
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        //  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+
+          places.forEach(function(place) {
+
+            /*  // Create a marker for each place.
+             $scope.markers.push(new google.maps.Marker({
+             map: map,
+             icon: orange_leaf_icon,
+             title: place.name,
+             position: place.geometry.location
+             }));*/
+            var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(places[0].geometry.location.lat(), places[0].geometry.location.lng()),
+              map: $scope.map,
+              title: places[0].name,
+              icon: orange_leaf_icon
+            });
+
+            var content = document.createElement('div'),
+              button;
+            content.innerHTML = places[0].name + '<br/>';
+            button = content.appendChild(document.createElement('p'));
+            button.type = 'text';
+            button.id='InfoWindowDetail';
+            button.innerHTML = 'Clinic Details';
+
+            google.maps.event.addListener(marker, 'click', function () {
+
+              infowindow.setOptions({
+                content: content,
+                map: $scope.map,
+                position: this.position
+              });
+
+            });
+            $scope.markers.push(marker);
+            $scope.loading.hide();
+            google.maps.event.addDomListener(button, 'click', function () {
+              //Open modal here for clinic details
+              console.log(places[0].geometry.location.lat() + ' And ' + places[0].geometry.location.lng());
+              var clinicDetails = {
+                clinicName : places[0].name,
+                lat : places[0].geometry.location.lat(),
+                long : places[0].geometry.location.lng(),
+                originLat : pos.coords.latitude,
+                originLong : pos.coords.longitude
+              };
+              $scope.showModal(clinicDetails);
+            });
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+
         var marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
@@ -243,5 +324,15 @@ hospitalModule.controller('clinicsListController',
       $scope.modal.remove();
       $state.go('doctorsList');
     };
+
+    $scope.disableTap = function(){
+      container = document.getElementsByClassName('pac-container');
+      // disable ionic data tab
+      angular.element(container).attr('data-tap-disabled', 'true');
+      // leave input field if google-address-entry is selected
+      angular.element(container).on("click", function(){
+        document.getElementById('pac-input').blur();
+      });
+    }
   });
 
